@@ -1,1149 +1,3283 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SHUBHAM SHIVAM & CO. — MUZAFFARPUR</title>
-<meta name="description" content="SHUBHAM SHIVAM & CO. — Chartered Accountant in MUZAFFARPUR offering Accounting & Bookkeeping, ROC Compliance, Startup Advisory. Contact us today.">
-<meta name="keywords" content="chartered accountant in muzaffarpur, CA in muzaffarpur, tax consultant muzaffarpur, shubham shivam co, CA bihar, GST muzaffarpur, income tax muzaffarpur">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap" rel="stylesheet">
-<style>
-/* ── RESET & BASE ── */
-:root{
-  --navy:#0A1628; --navy2:#112240; --blue:#1B4FD8; --blue-l:#2563EB;
-  --sky:#EEF3FF; --sky2:#F8FAFF; --gold:#F59E0B; --gold-l:#FCD34D;
-  --gray:#64748B; --gray-l:#94A3B8; --border:#E2E8F0;
-  --text:#1E293B; --soft:#475569; --green:#059669; --r:4px;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  background:#fff; color:var(--text);
-  font-size:15px; line-height:1.6;
-  overflow-x:hidden; width:100%;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  -webkit-tap-highlight-color:transparent;
-}
-img,video,iframe{max-width:100%;height:auto;display:block}
-
-/* ── SCROLLBAR ── */
-::-webkit-scrollbar{width:8px}
-::-webkit-scrollbar-track{background:#f1f5f9}
-::-webkit-scrollbar-thumb{background:linear-gradient(var(--blue),var(--navy));border-radius:100px;border:2px solid #f1f5f9}
-::selection{background:rgba(37,99,235,.15);color:var(--navy)}
-
-/* ── TICKER ── */
-.ticker-bar{
-  background:var(--navy); color:#94a3b8; font-size:12px;
-  overflow:hidden; white-space:nowrap;
-  border-bottom:2px solid var(--blue); position:relative;
-}
-.ticker-bar::before,.ticker-bar::after{
-  content:''; position:absolute; top:0; bottom:0; width:40px; z-index:2;
-}
-.ticker-bar::before{left:0;background:linear-gradient(90deg,var(--navy),transparent)}
-.ticker-bar::after{right:0;background:linear-gradient(270deg,var(--navy),transparent)}
-.ticker-track{display:inline-flex;animation:ticker 90s linear infinite;padding:8px 0}
-@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.ti{display:inline-flex;align-items:center;gap:6px;padding:0 24px;border-right:1px solid rgba(255,255,255,.07);flex-shrink:0}
-.dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.dr{background:#ef4444}.do{background:#f97316}.db{background:#60a5fa}.dn{background:#a78bfa}
-.ti .due{color:var(--gold);font-weight:600;margin-left:4px}
-.ti .dl{font-size:10px;color:#64748b;margin-left:3px}
-
-/* ── NAVBAR ── */
-nav{
-  background:rgba(255,255,255,.96); backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--border);
-  position:sticky; top:0; z-index:200;
-  box-shadow:0 1px 3px rgba(0,0,0,.04);
-  width:100%; transition:box-shadow .3s;
-}
-nav.scrolled{box-shadow:0 8px 28px rgba(15,23,42,.08),0 1px 2px rgba(15,23,42,.04)}
-.nc{
-  max-width:1280px; margin:0 auto;
-  padding:0 20px; height:64px;
-  display:flex; align-items:center;
-  gap:12px; width:100%;
-}
-
-/* Logo */
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;transition:transform .25s}
-.logo:hover{transform:translateY(-1px)}
-.logo-icon{
-  width:38px; height:38px; background:var(--blue);
-  border-radius:var(--r); display:flex;
-  align-items:center; justify-content:center;
-  flex-shrink:0; position:relative; overflow:hidden;
-}
-.logo-icon::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.2),transparent)}
-.logo-icon span{font-family:'Fraunces',serif;color:#fff;font-size:19px;font-weight:900;position:relative;z-index:1}
-.logo-txt{min-width:0}
-.logo-txt strong{
-  display:block; font-size:13px; font-weight:800;
-  color:var(--navy); letter-spacing:-.01em;
-  line-height:1.2; white-space:nowrap;
-}
-.logo-txt small{font-size:10px;color:var(--gray);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
-
-/* Desktop nav links */
-.nl{
-  display:flex; align-items:center; gap:2px;
-  flex:1; list-style:none; overflow:hidden; min-width:0;
-}
-.nl>li{position:relative}
-.nl>li>a{
-  display:flex; align-items:center; gap:4px;
-  padding:8px 10px; font-size:12.5px; font-weight:600;
-  color:var(--soft); text-decoration:none;
-  border-radius:var(--r); transition:all .2s; white-space:nowrap;
-  position:relative;
-}
-.nl>li>a::after{
-  content:''; position:absolute;
-  left:10px; right:10px; bottom:4px;
-  height:2px; background:var(--blue); border-radius:10px;
-  transform:scaleX(0); transition:transform .25s;
-}
-.nl>li>a:hover::after,.nl>li>a.active::after{transform:scaleX(1)}
-.nl>li>a:hover,.nl>li>a.active{color:var(--blue);background:var(--sky)}
-.nl>li>a .ch{font-size:9px;color:var(--gray-l);transition:transform .2s}
-.nl>li:hover>a .ch{transform:rotate(180deg)}
-.drop{
-  position:absolute; top:calc(100% + 6px); left:0;
-  background:#fff; border:1px solid var(--border);
-  border-radius:8px; min-width:175px;
-  box-shadow:0 8px 28px rgba(0,0,0,.09);
-  opacity:0; pointer-events:none;
-  transform:translateY(-6px); transition:all .2s;
-  z-index:300; padding:6px;
-}
-.nl>li:hover .drop{opacity:1;pointer-events:auto;transform:translateY(0)}
-.drop a{display:block;padding:9px 16px;font-size:13px;color:var(--soft);text-decoration:none;border-radius:6px;transition:all .2s}
-.drop a:hover{color:var(--blue);background:var(--sky)}
-
-/* Nav right */
-.ne{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:auto}
-.bwa{
-  display:flex;align-items:center;gap:5px;
-  background:#25D366;color:#fff;
-  padding:7px 12px;border-radius:var(--r);
-  font-size:12px;font-weight:700;
-  text-decoration:none;transition:background .2s;white-space:nowrap;
-}
-.bwa:hover{background:#1fba5a}
-.bct{
-  display:flex;align-items:center;gap:5px;
-  background:var(--blue);color:#fff;
-  padding:7px 14px;border-radius:var(--r);
-  font-size:12.5px;font-weight:700;
-  text-decoration:none;transition:background .2s;white-space:nowrap;
-}
-.bct:hover{background:var(--navy)}
-.mbtn{
-  display:none;align-items:center;justify-content:center;
-  width:40px;height:40px;flex-shrink:0;
-  background:#fff;border:1px solid var(--border);
-  border-radius:var(--r);cursor:pointer;
-  font-size:18px;color:var(--text);
-}
-
-/* ── HERO ── */
-.hero{
-  background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 55%,#1a3a6e 100%);
-  color:#fff; padding:72px 20px 64px;
-  text-align:center; position:relative; overflow:hidden; isolation:isolate;
-}
-.hero::before{
-  content:''; position:absolute; inset:0;
-  background-image:
-    radial-gradient(circle at 20% 50%,rgba(27,79,216,.15) 0%,transparent 50%),
-    radial-gradient(circle at 80% 20%,rgba(245,158,11,.06) 0%,transparent 40%);
-}
-.hero::after{
-  content:''; position:absolute; inset:0; z-index:-1;
-  background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-  background-size:70px 70px; opacity:.5;
-}
-.hbadge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
-  border-radius:100px;padding:5px 14px 5px 6px;
-  font-size:12px;color:rgba(255,255,255,.8);
-  margin-bottom:20px;font-weight:500;
-}
-.hbadge span{background:var(--gold);color:var(--navy);padding:2px 10px;border-radius:100px;font-size:11px;font-weight:700}
-.hero h1{
-  font-family:'Fraunces',serif;
-  font-size:clamp(30px,5vw,62px);
-  font-weight:900;line-height:1.08;
-  margin-bottom:16px;letter-spacing:-.02em;
-  text-shadow:0 4px 20px rgba(0,0,0,.25);
-}
-.hero h1 em{font-style:italic;color:var(--gold-l)}
-.hero-sub{
-  font-size:clamp(14px,2vw,16px);
-  color:rgba(255,255,255,.65);
-  max-width:540px;margin:0 auto 28px;line-height:1.75;
-}
-.hbtns{
-  display:flex;align-items:center;justify-content:center;
-  gap:10px;flex-wrap:wrap;margin-bottom:48px;
-}
-.bhp,.bhs,.bhw{
-  padding:11px 24px;border-radius:var(--r);
-  font-size:13.5px;font-weight:700;
-  text-decoration:none;border:2px solid transparent;
-  transition:all .25s;position:relative;overflow:hidden;
-}
-.bhp::before,.bhs::before,.bhw::before{
-  content:'';position:absolute;top:-120%;left:-20%;
-  width:60%;height:320%;background:rgba(255,255,255,.14);
-  transform:rotate(25deg);transition:.6s;
-}
-.bhp:hover::before,.bhs:hover::before,.bhw:hover::before{left:120%}
-.bhp{background:var(--blue);color:#fff;border-color:var(--blue)}
-.bhp:hover{background:var(--blue-l);border-color:var(--blue-l)}
-.bhs{background:transparent;color:#fff;border-color:rgba(255,255,255,.28)}
-.bhs:hover{border-color:#fff;background:rgba(255,255,255,.07)}
-.bhw{background:#25D366;color:#fff;border-color:#25D366}
-.bhw:hover{background:#1fba5a}
-.hstats{
-  display:flex;justify-content:center;
-  max-width:440px;margin:0 auto;
-  border:1px solid rgba(255,255,255,.12);border-radius:8px;
-  overflow:hidden;background:rgba(255,255,255,.04);
-  backdrop-filter:blur(10px);
-  animation:floaty 6s ease-in-out infinite;
-}
-@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
-.si{flex:1;padding:16px 10px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
-.si:last-child{border-right:none}
-.sn{font-family:'Fraunces',serif;font-size:28px;font-weight:900;color:#fff;line-height:1;margin-bottom:3px}
-.sn sup{font-size:14px;color:var(--gold)}
-.sl{font-size:10px;color:rgba(255,255,255,.45);font-weight:500;text-transform:uppercase;letter-spacing:.08em}
-
-/* ── SHARED SECTION ── */
-.sec{padding:64px 20px;position:relative}
-.con{max-width:1280px;margin:0 auto;width:100%}
-.sh{margin-bottom:40px;position:relative}
-.sh::after{
-  content:'';width:60px;height:3px;
-  background:linear-gradient(90deg,var(--blue),var(--gold));
-  display:block;margin-top:12px;border-radius:100px;
-}
-.sh h2{
-  font-family:'Fraunces',serif;
-  font-size:clamp(24px,3.5vw,38px);
-  font-weight:800;color:var(--navy);
-  margin-bottom:8px;letter-spacing:-.02em;line-height:1.15;
-}
-.sh p{font-size:14px;color:var(--gray);max-width:500px;line-height:1.7}
-.stag{
-  display:inline-block;background:var(--sky);color:var(--blue);
-  font-size:10.5px;font-weight:700;letter-spacing:.12em;
-  text-transform:uppercase;padding:3px 11px;
-  border-radius:3px;margin-bottom:8px;
-  border:1px solid rgba(27,79,216,.14);
-}
-
-/* ── SERVICES ── */
-.sbg{background:var(--sky2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.sc{
-  background:#fff;border:1px solid var(--border);
-  border-radius:10px;padding:24px 20px;
-  transition:all .25s;position:relative;overflow:hidden;
-}
-.sc::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--blue),var(--blue-l));
-  transform:scaleX(0);transform-origin:left;transition:transform .35s;
-}
-.sc::after{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(circle at top right,rgba(37,99,235,.07),transparent 40%);
-  opacity:0;transition:opacity .3s;
-}
-.sc:hover{box-shadow:0 8px 28px rgba(27,79,216,.1);border-color:rgba(27,79,216,.2);transform:translateY(-4px)}
-.sc:hover::before{transform:scaleX(1)}
-.sc:hover::after{opacity:1}
-.sci{font-size:26px;margin-bottom:11px;display:block;transition:transform .3s}
-.sc:hover .sci{transform:scale(1.08)}
-.sc h3{font-family:'Fraunces',serif;font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:6px}
-.sc>p{font-size:13px;color:var(--gray);line-height:1.65;margin-bottom:11px}
-.sc ul{list-style:none;display:flex;flex-direction:column;gap:5px}
-.sc ul li{font-size:12.5px;color:var(--soft);display:flex;align-items:flex-start;gap:7px}
-.sc ul li::before{content:'✓';color:var(--green);font-size:11px;flex-shrink:0;margin-top:2px;font-weight:700}
-
-/* ── ABOUT ── */
-.abg{background:#fff}
-.agrid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
-.at p{font-size:14px;color:var(--soft);line-height:1.8;margin-bottom:13px}
-.pa{margin-top:20px}
-.pa h4{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:9px}
-.ptags{display:flex;flex-wrap:wrap;gap:6px}
-.ptag{background:var(--sky);color:var(--blue);font-size:11px;font-weight:700;padding:4px 11px;border-radius:3px;border:1px solid rgba(27,79,216,.14);letter-spacing:.04em}
-.aaddr{
-  margin-top:18px;padding:13px;
-  background:var(--sky2);border:1px solid var(--border);
-  border-radius:7px;display:flex;align-items:flex-start;gap:9px;
-}
-.aaddr p{font-size:12.5px;color:var(--soft);line-height:1.6;margin:0}
-.abtns{display:flex;gap:9px;margin-top:18px;flex-wrap:wrap}
-.bso{
-  padding:9px 18px;border:1.5px solid var(--border);
-  border-radius:var(--r);font-size:13px;font-weight:600;
-  color:var(--text);text-decoration:none;transition:all .2s;
-}
-.bso:hover{border-color:var(--blue);color:var(--blue)}
-.bsl{
-  padding:9px 18px;background:var(--blue);
-  border-radius:var(--r);font-size:13px;font-weight:700;
-  color:#fff;text-decoration:none;transition:background .2s;
-}
-.bsl:hover{background:var(--navy)}
-.acard{
-  background:var(--navy);border-radius:12px;
-  padding:28px 24px;color:#fff;
-  position:relative;overflow:hidden;
-  box-shadow:0 20px 50px rgba(2,6,23,.25);
-  transition:transform .3s;
-}
-.acard:hover{transform:translateY(-4px)}
-.acard::before{content:'';position:absolute;top:-40px;right:-40px;width:150px;height:150px;background:rgba(255,255,255,.03);border-radius:50%}
-.acard::after{content:'';position:absolute;bottom:-60px;left:-40px;width:190px;height:190px;background:rgba(27,79,216,.12);border-radius:50%}
-.acbadge{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--gold);color:var(--navy);
-  padding:3px 11px;border-radius:3px;
-  font-size:10.5px;font-weight:700;
-  margin-bottom:16px;letter-spacing:.04em;position:relative;z-index:1;
-}
-.acard h3{font-family:'Fraunces',serif;font-size:22px;font-weight:800;margin-bottom:4px;position:relative;z-index:1}
-.acard .asub{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:20px;position:relative;z-index:1}
-.astats{display:flex;flex-direction:column;gap:9px;position:relative;z-index:1}
-.ast{
-  display:flex;align-items:center;gap:11px;
-  padding:10px;background:rgba(255,255,255,.05);
-  border-radius:6px;border:1px solid rgba(255,255,255,.07);
-  transition:all .25s;
-}
-.ast:hover{background:rgba(255,255,255,.08);transform:translateX(4px)}
-.astn{font-family:'Fraunces',serif;font-size:21px;font-weight:800;color:var(--gold);line-height:1;min-width:50px}
-.asti .al{font-size:12px;font-weight:600;color:#fff}
-.asti .ad{font-size:11px;color:rgba(255,255,255,.4);margin-top:1px}
-
-/* ── CONTACT ── */
-.cbg{background:var(--sky2);border-top:1px solid var(--border)}
-.cgrid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start}
-.ctitle{font-family:'Fraunces',serif;font-size:clamp(20px,2.8vw,30px);font-weight:800;color:var(--navy);margin-bottom:8px}
-.csub{font-size:14px;color:var(--gray);margin-bottom:22px;line-height:1.7}
-.ciitems{display:flex;flex-direction:column;gap:12px}
-.ci{display:flex;align-items:flex-start;gap:11px}
-.cii{
-  width:35px;height:35px;background:var(--blue);
-  border-radius:var(--r);display:flex;
-  align-items:center;justify-content:center;
-  font-size:14px;flex-shrink:0;
-}
-.cit strong{display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin-bottom:1px}
-.cit span{font-size:13px;color:var(--text)}
-.cfc{
-  background:#fff;border:1px solid var(--border);
-  border-radius:10px;padding:24px;
-  box-shadow:0 10px 35px rgba(15,23,42,.05);
-}
-.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.fg{margin-bottom:12px}
-.fg label{display:block;font-size:11px;font-weight:700;color:var(--soft);margin-bottom:5px;text-transform:uppercase;letter-spacing:.06em}
-.fg input,.fg select,.fg textarea{
-  width:100%;padding:9px 11px;
-  border:1.5px solid var(--border);border-radius:6px;
-  font-family:'Plus Jakarta Sans',sans-serif;font-size:13.5px;
-  color:var(--text);outline:none;
-  transition:border-color .2s,box-shadow .2s,transform .15s;
-  background:#fff;appearance:none;-webkit-appearance:none;
-}
-.fg input:hover,.fg select:hover,.fg textarea:hover{border-color:rgba(37,99,235,.4)}
-.fg input:focus,.fg select:focus,.fg textarea:focus{
-  border-color:var(--blue);
-  box-shadow:0 0 0 3px rgba(27,79,216,.07);
-  transform:translateY(-1px);
-}
-.fg textarea{resize:vertical;min-height:85px}
-.fnote{font-size:11px;color:var(--gray-l);line-height:1.5;margin:10px 0}
-.bsub{
-  width:100%;padding:12px;background:var(--blue);
-  color:#fff;border:none;border-radius:6px;
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-size:14px;font-weight:700;cursor:pointer;transition:background .2s;
-}
-.bsub:hover{background:var(--navy)}
-
-/* ── TESTIMONIALS ── */
-.tbg{background:#fff;border-top:1px solid var(--border)}
-.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
-.tc{
-  background:var(--sky2);border:1px solid var(--border);
-  border-radius:10px;padding:20px;
-  transition:all .25s;position:relative;overflow:hidden;
-}
-.tc::before{
-  content:'"';position:absolute;top:8px;right:16px;
-  font-size:65px;line-height:1;font-family:serif;
-  color:rgba(37,99,235,.06);
-}
-.tc:hover{box-shadow:0 6px 22px rgba(27,79,216,.08);transform:translateY(-3px)}
-.stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:8px}
-.tc blockquote{font-size:13px;color:var(--soft);line-height:1.75;font-style:italic;margin-bottom:14px}
-.ta{display:flex;align-items:center;gap:9px;border-top:1px solid var(--border);padding-top:13px}
-.tav{
-  width:34px;height:34px;background:var(--blue);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Fraunces',serif;font-size:15px;color:#fff;font-weight:700;flex-shrink:0;
-}
-.tan{font-size:13px;font-weight:700;color:var(--navy)}
-.tar{font-size:11px;color:var(--gray-l);margin-top:1px}
-.va-row{text-align:center}
-.bva{
-  display:inline-flex;align-items:center;gap:5px;
-  padding:9px 22px;border:1.5px solid var(--blue);
-  border-radius:var(--r);font-size:13px;font-weight:700;
-  color:var(--blue);text-decoration:none;transition:all .2s;
-}
-.bva:hover{background:var(--blue);color:#fff}
-
-/* ── TAX UPDATES ── */
-.ubg{background:var(--sky2);border-top:1px solid var(--border)}
-.ugrid{display:grid;grid-template-columns:1fr 1.4fr;gap:24px}
-.ucard{background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden}
-.uchead{padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.uchead h3{font-size:13.5px;font-weight:700;color:var(--navy)}
-.dlist,.nlist,.trlist{display:flex;flex-direction:column}
-.di{display:flex;align-items:flex-start;gap:11px;padding:12px 16px;border-bottom:1px solid var(--border);transition:background .2s}
-.di:last-child{border-bottom:none}
-.di:hover{background:var(--sky2)}
-.ddb{
-  background:var(--navy);color:#fff;border-radius:6px;
-  min-width:46px;height:46px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;
-}
-.ddb .dd{font-family:'Fraunces',serif;font-size:18px;font-weight:800;line-height:1}
-.ddb .dm{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.45);margin-top:1px}
-.dinf h4{font-size:12.5px;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:3px}
-.dbadges{display:flex;gap:4px;flex-wrap:wrap;margin-top:3px}
-.bd{font-size:9.5px;font-weight:700;padding:2px 6px;border-radius:3px;letter-spacing:.04em;text-transform:uppercase}
-.bd-gst{background:#dcfce7;color:#166534}
-.bd-inc{background:#fef3c7;color:#92400e}
-.bd-roc{background:#ede9fe;color:#4c1d95}
-.bd-urg{background:#fee2e2;color:#991b1b}
-.bd-d{background:#f1f5f9;color:#475569}
-.ni{padding:12px 16px;border-bottom:1px solid var(--border);transition:background .2s;text-decoration:none;display:block;color:inherit}
-.ni:last-child{border-bottom:none}
-.ni:hover{background:var(--sky2)}
-.nmeta{display:flex;align-items:center;gap:7px;margin-bottom:4px}
-.ndate{font-size:11px;color:var(--gray-l)}
-.ncat{font-size:9.5px;font-weight:700;padding:1px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.04em}
-.cg{background:#dcfce7;color:#166534}
-.ci2{background:#fef3c7;color:#92400e}
-.cc{background:#ede9fe;color:#4c1d95}
-.ni h4{font-size:12.5px;font-weight:600;color:var(--text);line-height:1.4}
-.ni p{font-size:12px;color:var(--gray);line-height:1.5;margin-top:2px}
-.tri{padding:12px 16px;border-bottom:1px solid var(--border);transition:background .2s}
-.tri:last-child{border-bottom:none}
-.tri:hover{background:var(--sky2)}
-.trm{display:flex;align-items:center;gap:7px;margin-bottom:3px}
-.tri h4{font-size:12.5px;font-weight:600;color:var(--text);line-height:1.4}
-.tri p{font-size:12px;color:var(--gray);margin-top:2px;line-height:1.5}
-.uva{text-align:right;padding-top:10px}
-.uva a{font-size:13px;font-weight:700;color:var(--blue);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
-.uva a:hover{color:var(--navy)}
-
-/* ── INDUSTRIES ── */
-.ibg{background:#fff;border-top:1px solid var(--border)}
-.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
-.ic{
-  border:1px solid var(--border);border-radius:10px;
-  padding:20px 18px;transition:all .25s;
-  position:relative;overflow:hidden;
-}
-.ic::after{
-  content:'';position:absolute;inset:auto 0 0 0;height:2px;
-  background:linear-gradient(90deg,var(--blue),transparent);
-  transform:scaleX(0);transform-origin:left;transition:transform .3s;
-}
-.ic:hover{border-color:rgba(27,79,216,.3);box-shadow:0 4px 18px rgba(27,79,216,.07);transform:translateY(-2px)}
-.ic:hover::after{transform:scaleX(1)}
-.iimg{width:46px;height:46px;background:var(--sky);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:11px}
-.ic h3{font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:5px}
-.ic p{font-size:12.5px;color:var(--gray);line-height:1.65}
-
-/* ── FOOTER ── */
-footer{
-  background:var(--navy);color:rgba(255,255,255,.65);
-  padding:48px 20px 0;position:relative;overflow:hidden;
-}
-footer::before{content:'';position:absolute;top:-100px;right:-100px;width:240px;height:240px;border-radius:50%;background:rgba(37,99,235,.07)}
-footer::after{content:'';position:absolute;bottom:-80px;left:-80px;width:200px;height:200px;border-radius:50%;background:rgba(245,158,11,.05)}
-.fgrid{
-  max-width:1280px;margin:0 auto;
-  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
-  gap:40px;padding-bottom:40px;
-  border-bottom:1px solid rgba(255,255,255,.07);
-  position:relative;z-index:1;
-}
-.fblogo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
-.fli{width:36px;height:36px;background:var(--blue);border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.fli span{font-family:'Fraunces',serif;color:#fff;font-size:17px;font-weight:900}
-.flt strong{display:block;font-size:13px;font-weight:800;color:#fff}
-.flt small{font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.05em}
-.fb>p{font-size:12.5px;line-height:1.7;max-width:290px;margin-bottom:14px}
-.fci{display:flex;align-items:flex-start;gap:7px;margin-bottom:8px;font-size:12px}
-.fci a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s}
-.fci a:hover{color:var(--gold)}
-.fsoc{display:flex;gap:7px;margin-top:14px}
-.fsb{
-  width:32px;height:32px;
-  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
-  border-radius:var(--r);display:flex;align-items:center;justify-content:center;
-  color:rgba(255,255,255,.45);text-decoration:none;
-  font-size:11px;font-weight:700;transition:all .2s;
-}
-.fsb:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-.fbadge{
-  display:inline-flex;align-items:center;gap:5px;
-  background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);
-  border-radius:3px;padding:5px 11px;
-  font-size:10.5px;color:var(--gold);font-weight:600;
-  margin-top:14px;letter-spacing:.04em;
-}
-.fc h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.35);margin-bottom:14px}
-.fc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.fc ul li a{font-size:12.5px;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
-.fc ul li a:hover{color:var(--gold-l)}
-.fbot{
-  max-width:1280px;margin:0 auto;
-  padding:16px 0;display:flex;align-items:center;
-  justify-content:space-between;flex-wrap:wrap;gap:8px;
-  font-size:11.5px;color:rgba(255,255,255,.28);
-  position:relative;z-index:1;
-}
-.fbot a{color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
-.fbot a:hover{color:var(--gold)}
-
-/* ── FLOATING BUTTONS ── */
-.wafl{
-  position:fixed;bottom:22px;right:22px;z-index:500;
-  display:flex;align-items:center;gap:7px;
-  background:#25D366;color:#fff;text-decoration:none;
-  padding:11px 16px;border-radius:100px;
-  font-size:13px;font-weight:700;
-  box-shadow:0 4px 18px rgba(37,211,102,.4);
-  transition:all .3s;
-  animation:pulsewh 2.4s infinite;
-}
-@keyframes pulsewh{0%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 14px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
-.wafl:hover{background:#1fba5a;transform:translateY(-2px);animation:none;box-shadow:0 8px 26px rgba(37,211,102,.5)}
-.bktop{
-  position:fixed;bottom:22px;left:22px;z-index:500;
-  width:38px;height:38px;background:var(--navy);
-  border:1px solid rgba(255,255,255,.1);border-radius:var(--r);
-  display:flex;align-items:center;justify-content:center;
-  color:#fff;text-decoration:none;font-size:15px;
-  opacity:0;pointer-events:none;transition:all .3s;
-  backdrop-filter:blur(10px);
-}
-.bktop.vis{opacity:1;pointer-events:auto}
-.bktop:hover{background:var(--blue)}
-
-/* ── MOBILE NAV ── */
-.mnav{
-  position:fixed;top:0;right:0;
-  width:min(320px,100vw);height:100vh;
-  background:#fff;z-index:9999;
-  padding:20px;overflow-y:auto;
-  transform:translateX(100%);transition:transform .3s ease;
-  box-shadow:-10px 0 30px rgba(0,0,0,.08);
-}
-.mnav.open{transform:translateX(0)}
-.mnavh{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border)}
-.mnavc{background:none;border:1px solid var(--border);border-radius:var(--r);padding:5px 9px;font-size:17px;cursor:pointer}
-.mnav a{
-  display:block;padding:13px 0;font-size:15px;font-weight:600;
-  color:var(--text);text-decoration:none;
-  border-bottom:1px solid var(--border);
-  transition:all .2s;
-}
-.mnav a:hover{color:var(--blue);padding-left:6px}
-.mnav-overlay{
-  position:fixed;inset:0;background:rgba(0,0,0,.4);
-  z-index:9998;opacity:0;pointer-events:none;transition:opacity .3s;
-}
-.mnav-overlay.open{opacity:1;pointer-events:auto}
-
-/* ── MODAL ── */
-.movo{
-  position:fixed;inset:0;background:rgba(0,0,0,.48);
-  z-index:10000;display:flex;align-items:center;justify-content:center;
-  opacity:0;pointer-events:none;transition:opacity .3s;padding:16px;
-}
-.movo.open{opacity:1;pointer-events:auto}
-.mov{
-  background:#fff;border-radius:10px;
-  width:100%;max-width:420px;padding:28px;
-  position:relative;transform:scale(.95);transition:transform .3s;
-  box-shadow:0 30px 70px rgba(2,6,23,.35);
-}
-.mov::before{
-  content:'';position:absolute;inset:0 0 auto 0;height:4px;
-  background:linear-gradient(90deg,var(--blue),var(--gold));
-  border-radius:10px 10px 0 0;
-}
-.movo.open .mov{transform:scale(1)}
-.mov h3{font-family:'Fraunces',serif;font-size:21px;font-weight:800;color:var(--navy);margin-bottom:4px}
-.mov p{font-size:13px;color:var(--gray);margin-bottom:18px}
-.movc{
-  position:absolute;top:14px;right:14px;width:30px;height:30px;
-  border:1px solid var(--border);border-radius:50%;background:none;
-  cursor:pointer;font-size:15px;color:var(--gray);
-  display:flex;align-items:center;justify-content:center;transition:background .2s;
-}
-.movc:hover{background:var(--border)}
-
-/* ── RESPONSIVE: TABLET 1024px ── */
-@media(max-width:1024px){
-  .nc{padding:0 16px}
-  .nl>li>a{padding:7px 8px;font-size:12px}
-  .logo-txt strong{font-size:12px}
-  .bwa,.bct{padding:7px 10px;font-size:12px}
-  .sgrid{grid-template-columns:repeat(2,1fr)}
-  .agrid{grid-template-columns:1fr;gap:36px}
-  .cgrid{grid-template-columns:1fr;gap:32px}
-  .ugrid{grid-template-columns:1fr}
-  .tgrid{grid-template-columns:repeat(2,1fr)}
-  .igrid{grid-template-columns:repeat(2,1fr)}
-  .fgrid{grid-template-columns:1fr 1fr;gap:28px}
-  .sec{padding:56px 20px}
-}
-
-/* ── RESPONSIVE: MOBILE 768px ── */
-@media(max-width:768px){
-  /* Nav */
-  .nc{height:60px;padding:0 14px}
-  .nl{display:none}
-  .ne .bwa{display:none}
-  .ne .bct{display:none}
-  .mbtn{display:flex}
-
-  /* Hero */
-  .hero{padding:48px 16px 56px}
-  .hero h1{font-size:clamp(26px,8vw,34px)}
-  .hero-sub{font-size:14px}
-  .hbtns{flex-direction:column;width:100%;gap:8px}
-  .hbtns a{width:100%;text-align:center;justify-content:center}
-  .hstats{flex-direction:column;max-width:100%;animation:none}
-  .si{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);padding:14px}
-  .si:last-child{border-bottom:none}
-
-  /* Sections */
-  .sec{padding:48px 16px}
-  .sh{margin-bottom:28px}
-  .sh h2{font-size:clamp(22px,7vw,30px)}
-  .sh::after{width:44px}
-
-  /* Grids */
-  .sgrid,.igrid,.tgrid{grid-template-columns:1fr}
-  .fr{grid-template-columns:1fr}
-  .fgrid{grid-template-columns:1fr;gap:28px}
-  .agrid{grid-template-columns:1fr}
-  .cgrid{grid-template-columns:1fr}
-  .ugrid{grid-template-columns:1fr}
-
-  /* Float buttons */
-  .wafl{right:14px;bottom:14px;padding:10px 14px;font-size:12px}
-  .bktop{left:14px;bottom:14px}
-
-  /* Dropdowns disable on mobile */
-  .drop{display:none!important}
-
-  /* Card radii */
-  .acard,.sc,.tc,.ic,.cfc{border-radius:12px}
-
-  /* Footer bottom */
-  .fbot{flex-direction:column;text-align:center}
-}
-
-/* ── RESPONSIVE: SMALL 480px ── */
-@media(max-width:480px){
-  .nc{padding:0 12px}
-  .logo-icon{width:34px;height:34px}
-  .logo-icon span{font-size:16px}
-  .logo-txt strong{font-size:10.5px}
-  .logo-txt small{display:none}
-
-  .hero h1{font-size:clamp(22px,7vw,28px)}
-  .hero-sub{font-size:13px}
-  .bhp,.bhs,.bhw{padding:11px 14px;font-size:13px}
-
-  .sn{font-size:24px}
-  .sc,.tc,.ic,.acard,.cfc{padding:16px}
-  .mov{padding:20px}
-
-  .igrid{grid-template-columns:1fr}
-  .tgrid{grid-template-columns:1fr}
-}
-
-/* ── RESPONSIVE: TINY 360px ── */
-@media(max-width:360px){
-  .hero h1{font-size:21px}
-  .hero-sub{font-size:12px}
-  .bhp,.bhs,.bhw{font-size:12px;padding:10px 12px}
-  .logo-txt strong{font-size:9.5px}
-}
-
-/* ── REDUCED MOTION ── */
-@media(prefers-reduced-motion:reduce){
-  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-}
-</style>
-</head>
-<body>
-
-<!-- TICKER -->
-<div class="ticker-bar">
-  <div class="ticker-track">
-    <div class="ti"><span class="dot dr"></span>GSTR-3B (Apr 2026) — Summary of outward supplies, ITC claimed &amp; net tax payable for turnover &gt;₹5Cr or non-QRMP<span class="due">20 May</span><span class="dl">1d left</span></div>
-    <div class="ti"><span class="dot dr"></span>OIDAR Services — outward taxable supplies summary<span class="due">20 May</span><span class="dl">1d left</span></div>
-    <div class="ti"><span class="dot do"></span>PMT-06 — GST payment challan for QRMP scheme taxpayers<span class="due">25 May</span><span class="dl">6d left</span></div>
-    <div class="ti"><span class="dot db"></span>Issue of TCS certificates — Q4 FY 2025-26<span class="due">30 May</span><span class="dl">11d left</span></div>
-    <div class="ti"><span class="dot db"></span>GST ITC-03 — ITC reversal filing by composition/exempted dealers<span class="due">30 May</span><span class="dl">11d left</span></div>
-    <div class="ti"><span class="dot dn"></span>📰 GSTAT Benches Officially Constituted Across India</div>
-    <div class="ti"><span class="dot dn"></span>📰 GST Appeals System Gets Structured — Benches &amp; Jurisdictions Notified</div>
-    <div class="ti"><span class="dot dn"></span>📰 MCA Notifies Revised Fees for DIR-3 KYC Web Filing</div>
-    <div class="ti"><span class="dot dn"></span>📰 MCA Issues FAQs on Companies Compliance Facilitation Scheme, 2026</div>
-    <!-- duplicate -->
-    <div class="ti"><span class="dot dr"></span>GSTR-3B (Apr 2026) — Summary of outward supplies, ITC claimed &amp; net tax payable for turnover &gt;₹5Cr or non-QRMP<span class="due">20 May</span><span class="dl">1d left</span></div>
-    <div class="ti"><span class="dot dr"></span>OIDAR Services — outward taxable supplies summary<span class="due">20 May</span><span class="dl">1d left</span></div>
-    <div class="ti"><span class="dot do"></span>PMT-06 — GST payment challan for QRMP scheme taxpayers<span class="due">25 May</span><span class="dl">6d left</span></div>
-    <div class="ti"><span class="dot db"></span>Issue of TCS certificates — Q4 FY 2025-26<span class="due">30 May</span><span class="dl">11d left</span></div>
-    <div class="ti"><span class="dot db"></span>GST ITC-03 — ITC reversal filing by composition/exempted dealers<span class="due">30 May</span><span class="dl">11d left</span></div>
-    <div class="ti"><span class="dot dn"></span>📰 GSTAT Benches Officially Constituted Across India</div>
-    <div class="ti"><span class="dot dn"></span>📰 GST Appeals System Gets Structured — Benches &amp; Jurisdictions Notified</div>
-    <div class="ti"><span class="dot dn"></span>📰 MCA Notifies Revised Fees for DIR-3 KYC Web Filing</div>
-    <div class="ti"><span class="dot dn"></span>📰 MCA Issues FAQs on Companies Compliance Facilitation Scheme, 2026</div>
-  </div>
-</div>
-
-<!-- NAVBAR -->
-<nav id="navbar">
-  <div class="nc">
-    <a href="#hero" class="logo">
-      <div class="logo-icon"><span>S</span></div>
-      <div class="logo-txt">
-        <strong>SHUBHAM SHIVAM & CO.</strong>
-        <small>Chartered Accountants · Muzaffarpur</small>
-      </div>
-    </a>
-    <ul class="nl">
-      <li><a href="#hero" class="active">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li>
-        <a href="#">About <span class="ch">▾</span></a>
-        <div class="drop">
-          <a href="#about">About Us</a>
-          <a href="#about">Team</a>
-          <a href="#industries">Industries</a>
-        </div>
-      </li>
-      <li><a href="#contact">Contact</a></li>
-      <li>
-        <a href="#">Knowledge <span class="ch">▾</span></a>
-        <div class="drop">
-          <a href="#updates">Tax News</a>
-          <a href="#updates">Due Dates</a>
-        </div>
-      </li>
-      <li>
-        <a href="#">Clients <span class="ch">▾</span></a>
-        <div class="drop">
-          <a href="#testimonials">Testimonials</a>
-        </div>
-      </li>
-    </ul>
-    <div class="ne">
-      <a href="https://wa.me/91XXXXXXXXXX" class="bwa" target="_blank">💬 WhatsApp Us</a>
-      <a href="#contact" class="bct">Get in Touch</a>
-      <button class="mbtn" onclick="document.getElementById('mnav').classList.toggle('open')">☰</button>
-    </div>
-  </div>
-</nav>
-
-<!-- MOBILE NAV -->
-<div class="mnav" id="mnav">
-  <div class="mnavh">
-    <span style="font-weight:800;color:var(--navy);font-size:13.5px">SHUBHAM SHIVAM & CO.</span>
-    <button class="mnavc" onclick="document.getElementById('mnav').classList.remove('open')">✕</button>
-  </div>
-  <a href="#hero" onclick="document.getElementById('mnav').classList.remove('open')">Home</a>
-  <a href="#services" onclick="document.getElementById('mnav').classList.remove('open')">Services</a>
-  <a href="#about" onclick="document.getElementById('mnav').classList.remove('open')">About Us</a>
-  <a href="#contact" onclick="document.getElementById('mnav').classList.remove('open')">Contact</a>
-  <a href="#updates" onclick="document.getElementById('mnav').classList.remove('open')">Tax News</a>
-  <a href="#testimonials" onclick="document.getElementById('mnav').classList.remove('open')">Testimonials</a>
-  <a href="#industries" onclick="document.getElementById('mnav').classList.remove('open')">Industries</a>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hbadge"><span>ICAI Member Firm</span> Muzaffarpur, Bihar</div>
-  <h1>SHUBHAM SHIVAM & CO.<br><em>Chartered Accountants</em></h1>
-  <p class="hero-sub">Your trusted partner for Accounting & Bookkeeping, ROC Compliance, Startup Advisory, Tax Planning, and GST — serving businesses and individuals across Muzaffarpur and Bihar.</p>
-  <div class="hbtns">
-    <a href="#services" class="bhp">Our Services</a>
-    <a href="#contact" class="bhs">Get in Touch</a>
-    <a href="https://wa.me/91XXXXXXXXXX" class="bhw" target="_blank">💬 WhatsApp Us</a>
-  </div>
-  <div class="hstats">
-    <div class="si"><div class="sn">500<sup>+</sup></div><div class="sl">Clients Served</div></div>
-    <div class="si"><div class="sn">100<sup>%</sup></div><div class="sl">Compliance</div></div>
-    <div class="si"><div class="sn">Pan</div><div class="sl">India Location</div></div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="sec sbg" id="services">
-  <div class="con">
-    <div class="sh">
-      <div class="stag">What We Offer</div>
-      <h2>Our Services</h2>
-      <p>Comprehensive professional services tailored to your business needs.</p>
-    </div>
-    <div class="sgrid">
-      <div class="sc"><span class="sci">📊</span><h3>Accounting & Bookkeeping</h3><p>Accurate, timely bookkeeping and financial reporting for businesses of all sizes.</p><ul><li>Monthly bookkeeping & ledger</li><li>Financial statements preparation</li><li>MIS reporting & payroll</li><li>Tally / Zoho / QuickBooks</li></ul></div>
-      <div class="sc"><span class="sci">📋</span><h3>ROC Compliance</h3><p>End-to-end MCA and company secretarial compliance for all entity types.</p><ul><li>Annual filing — AOC-4, MGT-7</li><li>Director KYC (DIR-3)</li><li>Company incorporation & changes</li><li>LLP, OPC, Pvt Ltd compliance</li></ul></div>
-      <div class="sc"><span class="sci">🔍</span><h3>Startup Advisory</h3><p>From ideation to incorporation — complete guidance for startups and new businesses.</p><ul><li>Startup India / DPIIT registration</li><li>Pitch deck financials</li><li>Funding & angel tax advisory</li><li>MSME / Udyam registration</li></ul></div>
-      <div class="sc"><span class="sci">🏢</span><h3>Tax Planning</h3><p>Strategic tax planning and ITR filing for individuals, firms, and companies.</p><ul><li>Individual & business tax planning</li><li>ITR filing — all forms</li><li>Tax scrutiny & representation</li><li>Capital gains advisory</li></ul></div>
-      <div class="sc"><span class="sci">📑</span><h3>GST Registration</h3><p>Complete GST return filing, reconciliation and compliance management for businesses of all sizes.</p><ul><li>GST registration (GSTIN)</li><li>GSTR-1, GSTR-3B monthly filing</li><li>GSTR-9 annual return</li><li>GST audit & litigation</li></ul></div>
-      <div class="sc"><span class="sci">💼</span><h3>Business Advisory</h3><p>Strategic financial planning and advisory to scale your business confidently.</p><ul><li>Strategic financial planning</li><li>Project reports & CMA data</li><li>Audit & assurance services</li><li>TDS / TCS compliance</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="sec abg" id="about">
-  <div class="con">
-    <div class="agrid">
-      <div class="at">
-        <div class="stag">About Our Firm</div>
-        <h2 style="font-family:'Fraunces',serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;color:var(--navy);margin-bottom:18px;letter-spacing:-0.02em;line-height:1.15">About Our Firm</h2>
-        <p>SHUBHAM SHIVAM & CO. is a professional Chartered Accountancy firm dedicated to providing the highest quality financial services to businesses and individuals across Muzaffarpur and Bihar.</p>
-        <p>Led by CA <strong>Shubham Jha</strong>, our team of qualified professionals brings deep expertise in taxation, audit, and compliance. We combine domain knowledge with modern technology to deliver timely, accurate, and reliable solutions.</p>
-        <p>We believe in building long-term relationships with our clients — understanding their business deeply and providing proactive, personalized advice that drives real results.</p>
-        <div class="pa">
-          <h4>Practice Areas</h4>
-          <div class="ptags">
-            <span class="ptag">GST</span><span class="ptag">INCOME TAX</span><span class="ptag">AUDIT</span><span class="ptag">COMPANY LAW</span><span class="ptag">TDS</span><span class="ptag">STARTUP</span>
-          </div>
-        </div>
-        <div class="aaddr">
-          <span style="font-size:15px;flex-shrink:0;margin-top:1px">📍</span>
-          <p>Muzaffarpur, Bihar — 842001<br><strong>Phone:</strong> +91 XXXXX XXXXX &nbsp;·&nbsp; <strong>Email:</strong> ca@shubhamshivam.in</p>
-        </div>
-        <div class="abtns">
-          <a href="#contact" class="bsl">Get in Touch</a>
-          <a href="#about" class="bso">Learn More</a>
-        </div>
-      </div>
-      <div>
-        <div class="acard">
-          <div class="acbadge">✦ Chartered Accountant</div>
-          <h3>CA Shubham Jha</h3>
-          <p class="asub">Founder & Proprietor — Shubham Shivam & Co.</p>
-          <div class="astats">
-            <div class="ast"><div class="astn">500+</div><div class="asti"><div class="al">Clients Served</div><div class="ad">Businesses, Individuals, Startups</div></div></div>
-            <div class="ast"><div class="astn">10+</div><div class="asti"><div class="al">Years Experience</div><div class="ad">Tax, Audit & Compliance Advisory</div></div></div>
-            <div class="ast"><div class="astn">100%</div><div class="asti"><div class="al">Compliance Rate</div><div class="ad">Zero missed deadlines policy</div></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="sec cbg" id="contact">
-  <div class="con">
-    <div class="sh">
-      <div class="stag">Reach Out</div>
-      <h2>Get in Touch</h2>
-      <p>Have a question or need assistance? Drop us a message.</p>
-    </div>
-    <div class="cgrid">
-      <div>
-        <h3 class="ctitle">We're here to help</h3>
-        <p class="csub">Whether you need tax advice, GST help, or full compliance support — reach out and we'll guide you.</p>
-        <div class="ciitems">
-          <div class="ci"><div class="cii">📍</div><div class="cit"><strong>Address</strong><span>Muzaffarpur, Bihar — 842001</span></div></div>
-          <div class="ci"><div class="cii">📞</div><div class="cit"><strong>Phone / WhatsApp</strong><span>+91 XXXXX XXXXX</span></div></div>
-          <div class="ci"><div class="cii">✉️</div><div class="cit"><strong>Email</strong><span>ca@shubhamshivam.in</span></div></div>
-          <div class="ci"><div class="cii">🕐</div><div class="cit"><strong>Working Hours</strong><span>Mon–Sat: 10:00 AM – 7:00 PM</span></div></div>
-        </div>
-      </div>
-      <div class="cfc">
-        <div class="fr">
-          <div class="fg"><label>Your Name *</label><input type="text" placeholder="Ramesh Kumar"></div>
-          <div class="fg"><label>Email Address</label><input type="email" placeholder="you@email.com"></div>
-        </div>
-        <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+91 98765 43210"></div>
-        <div class="fg"><label>Service Required</label><select><option>Select a service...</option><option>GST Registration & Filing</option><option>Income Tax / ITR Filing</option><option>ROC / Company Compliance</option><option>Accounting & Bookkeeping</option><option>Startup Advisory</option><option>Business Advisory</option><option>TDS / TCS Compliance</option><option>Other</option></select></div>
-        <div class="fg"><label>Your Message</label><textarea placeholder="Briefly describe your requirement..."></textarea></div>
-        <p class="fnote">By clicking <strong>Send Enquiry</strong>, you confirm that SHUBHAM SHIVAM & CO. may process your name, email, phone number, and message only to respond to this enquiry. Please do not enter PAN, Aadhaar, bank, or other sensitive details here.</p>
-        <button class="bsub" onclick="alert('Thank you! We will get back to you shortly.')">Send Enquiry</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="sec tbg" id="testimonials">
-  <div class="con">
-    <div class="sh">
-      <div class="stag">Client Stories</div>
-      <h2>What Our Clients Say</h2>
-      <p>Trusted by businesses and individuals for quality service.</p>
-    </div>
-    <div class="tgrid">
-      <div class="tc"><div class="stars">★★★★★</div><blockquote>"Excellent CA Services! Shubham Shivam & Co. is highly professional in tax, GST, audit, and company work. CA Shubham Ji is very knowledgeable and always ready to guide. Quick, reliable, and trustworthy — highly recommended."</blockquote><div class="ta"><div class="tav">R</div><div><div class="tan">Ramesh Prasad</div><div class="tar">Business Owner, Muzaffarpur</div></div></div></div>
-      <div class="tc"><div class="stars">★★★★★</div><blockquote>"This firm is very good. My experience was far better than expected. I will recommend others to get their accountancy, GST, or ROC work done here. Very professional team and great response time."</blockquote><div class="ta"><div class="tav">S</div><div><div class="tan">Sunil Kumar</div><div class="tar">Retailer, Bihar</div></div></div></div>
-      <div class="tc"><div class="stars">★★★★★</div><blockquote>"As a client, I'm highly satisfied with their professionalism and client-focused service. Their team provides timely, practical advice on taxation and compliance. Zero penalties in 2 years of working together."</blockquote><div class="ta"><div class="tav">P</div><div><div class="tan">Priya Singh</div><div class="tar">Startup Founder, Muzaffarpur</div></div></div></div>
-    </div>
-    <div class="va-row"><a href="#testimonials" class="bva">View All Testimonials →</a></div>
-  </div>
-</section>
-
-<!-- TAX UPDATES -->
-<section class="sec ubg" id="updates">
-  <div class="con">
-    <div class="sh">
-      <div class="stag">Stay Compliant</div>
-      <h2>Latest Tax Updates</h2>
-      <p>Stay ahead with upcoming compliance deadlines and the latest tax developments.</p>
-    </div>
-    <div class="ugrid">
-      <div>
-        <div class="ucard">
-          <div class="uchead"><h3>📅 Upcoming Due Dates</h3></div>
-          <div class="dlist">
-            <div class="di"><div class="ddb"><div class="dd">20</div><div class="dm">May</div></div><div class="dinf"><h4>Summary of outward supplies, ITC claimed — GSTR-3B (Apr 2026)</h4><div class="dbadges"><span class="bd bd-gst">GST</span><span class="bd bd-urg">Tomorrow</span></div></div></div>
-            <div class="di"><div class="ddb"><div class="dd">20</div><div class="dm">May</div></div><div class="dinf"><h4>OIDAR Services — outward taxable supplies summary</h4><div class="dbadges"><span class="bd bd-gst">GST</span><span class="bd bd-urg">Tomorrow</span></div></div></div>
-            <div class="di"><div class="ddb"><div class="dd">25</div><div class="dm">May</div></div><div class="dinf"><h4>PMT-06 — GST payment challan for QRMP scheme taxpayers</h4><div class="dbadges"><span class="bd bd-gst">GST</span><span class="bd bd-d">6 days left</span></div></div></div>
-            <div class="di"><div class="ddb"><div class="dd">30</div><div class="dm">May</div></div><div class="dinf"><h4>Issue of TCS certificates — Q4 FY 2025-26</h4><div class="dbadges"><span class="bd bd-inc">Income Tax</span><span class="bd bd-d">11 days left</span></div></div></div>
-            <div class="di"><div class="ddb"><div class="dd">30</div><div class="dm">May</div></div><div class="dinf"><h4>GST ITC-03 — ITC reversal by composition / exempted dealers</h4><div class="dbadges"><span class="bd bd-gst">GST</span><span class="bd bd-d">11 days left</span></div></div></div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="ucard">
-          <div class="uchead"><h3>📰 Tax News</h3></div>
-          <div class="nlist">
-            <div class="ni"><div class="nmeta"><span class="ndate">15 May 2026</span><span class="ncat cg">GST</span></div><h4>GSTAT Benches Officially Constituted Across India</h4><p>The GST Appellate Tribunal has officially constituted benches across multiple states for structured appeal hearings.</p></div>
-            <div class="ni"><div class="nmeta"><span class="ndate">15 May 2026</span><span class="ncat cg">GST</span></div><h4>GST Appeals System Gets Structured</h4><p>GSTAT has issued an official order allocating benches, members, and jurisdictions for GST appeal hearings.</p></div>
-            <div class="ni"><div class="nmeta"><span class="ndate">01 May 2026</span><span class="ncat cg">GST</span></div><h4>GST Update — Tax Changes on Beverages (HSN Revised)</h4><p>Notification No. 01/2026-IGST (Rate) dated 30 April 2026 amends HSN codes under Schedule I (5%).</p></div>
-            <div class="ni"><div class="nmeta"><span class="ndate">23 Apr 2026</span><span class="ncat cc">Company Law</span></div><h4>MCA Notifies Revised Fees for DIR-3 KYC Web Filing</h4><p>MCA has issued Notification G.S.R. 300(E) dated 21 April 2026 revising fees structure.</p></div>
-            <div class="ni"><div class="nmeta"><span class="ndate">22 Apr 2026</span><span class="ncat cc">Company Law</span></div><h4>MCA Issues FAQs on Companies Compliance Facilitation Scheme, 2026</h4><p>MCA has issued FAQs clarifying CCFS-2026 scheme including eligibility and filing procedures.</p></div>
-          </div>
-        </div>
-        <div class="ucard" style="margin-top:16px">
-          <div class="uchead"><h3>🔥 Trending Topics</h3></div>
-          <div class="trlist">
-            <div class="tri"><div class="trm"><span class="ncat ci2">Income Tax</span><span class="ndate" style="margin-left:6px">1 day ago</span></div><h4>Form 16 / Form 16A validity — TRACES portal download constitutes valid TDS certificate</h4><p>Forms downloaded through TRACES portal alone constitute valid TDS certificates under law.</p></div>
-            <div class="tri"><div class="trm"><span class="ncat ci2">Income Tax</span><span class="ndate" style="margin-left:6px">1 day ago</span></div><h4>IT Department Launches Major Appeal Cleanup Drive</h4><p>Income Tax Department has started an aggressive drive to dispose of pending appeals across all benches.</p></div>
-            <div class="tri"><div class="trm"><span class="ncat cg">GST</span><span class="ndate" style="margin-left:6px">3 days ago</span></div><h4>Govt May Restrict Manual Editing in GSTR-3B</h4><p>Government is considering restricting manual overrides in GSTR-3B to curb ITC mismatches and frauds.</p></div>
-          </div>
-        </div>
-        <div class="uva"><a href="#updates">View All Updates →</a></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INDUSTRIES -->
-<section class="sec ibg" id="industries">
-  <div class="con">
-    <div class="sh">
-      <div class="stag">Sectors We Serve</div>
-      <h2>Industries We Serve</h2>
-      <p>Specialized expertise across diverse industry sectors to serve your unique compliance needs.</p>
-    </div>
-    <div class="igrid">
-      <div class="ic"><div class="iimg">🏭</div><h3>Manufacturing</h3><p>Audit, GST compliance, cost accounting, and tax planning for manufacturing enterprises.</p></div>
-      <div class="ic"><div class="iimg">💻</div><h3>IT & Software</h3><p>Tax advisory, transfer pricing, ESOP structuring, and compliance for technology companies.</p></div>
-      <div class="ic"><div class="iimg">🏗️</div><h3>Real Estate</h3><p>GST on construction, capital gains planning, and RERA compliance advisory.</p></div>
-      <div class="ic"><div class="iimg">🏥</div><h3>Healthcare</h3><p>Tax planning and compliance for hospitals, clinics, and healthcare providers.</p></div>
-      <div class="ic"><div class="iimg">🛒</div><h3>Retail & E-commerce</h3><p>GST filing, inventory valuation, and multi-state compliance for retail businesses.</p></div>
-      <div class="ic"><div class="iimg">🏦</div><h3>Banking & Finance</h3><p>Regulatory compliance, tax audit, and financial reporting for NBFCs and banks.</p></div>
-    </div>
-    <div class="va-row"><a href="#industries" class="bva">View All Industries →</a></div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="fgrid">
-    <div class="fb">
-      <div class="fblogo">
-        <div class="fli"><span>S</span></div>
-        <div class="flt"><strong>SHUBHAM SHIVAM & CO.</strong><small>Chartered Accountants</small></div>
-      </div>
-      <p>SHUBHAM SHIVAM & CO. is a trusted Chartered Accountant firm based in Muzaffarpur, Bihar. We provide professional services including Accounting & Bookkeeping, ROC Compliance, Startup Advisory, and Tax Planning to individuals and businesses across Bihar.</p>
-      <div class="fci">📍 Muzaffarpur, Bihar — 842001</div>
-      <div class="fci">📞 <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></div>
-      <div class="fci">✉️ <a href="mailto:ca@shubhamshivam.in">ca@shubhamshivam.in</a></div>
-      <div class="fsoc">
-        <a href="#" class="fsb">in</a>
-        <a href="#" class="fsb">fb</a>
-        <a href="#" class="fsb">ig</a>
-      </div>
-      <div class="fbadge">✦ Member of ICAI — Institute of Chartered Accountants of India</div>
-    </div>
-    <div class="fc">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#about">Team</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#updates">Tax News</a></li>
-        <li><a href="#industries">Industries</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-      </ul>
-    </div>
-    <div class="fc">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#services">Accounting & Bookkeeping</a></li>
-        <li><a href="#services">ROC Compliance</a></li>
-        <li><a href="#services">Startup Advisory</a></li>
-        <li><a href="#services">Tax Planning</a></li>
-        <li><a href="#services">GST Registration</a></li>
-        <li><a href="#services">Business Advisory</a></li>
-        <li><a href="#services">TDS / TCS</a></li>
-      </ul>
-    </div>
-    <div class="fc">
-      <h4>Important Links</h4>
-      <ul>
-        <li><a href="https://incometaxindia.gov.in" target="_blank">Income Tax India</a></li>
-        <li><a href="https://eportal.incometax.gov.in" target="_blank">e-Filing Portal</a></li>
-        <li><a href="https://www.gst.gov.in" target="_blank">GST Portal</a></li>
-        <li><a href="https://www.mca.gov.in" target="_blank">MCA Portal</a></li>
-        <li><a href="https://www.tdscpc.gov.in" target="_blank">TRACES / TDS</a></li>
-        <li><a href="https://www.icai.org" target="_blank">ICAI</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="fbot">
-    <p>© 2026 SHUBHAM SHIVAM & CO. All rights reserved. · Muzaffarpur, Bihar</p>
-    <p>Member of ICAI — <a href="https://www.icai.org" target="_blank">Institute of Chartered Accountants of India</a></p>
-  </div>
-</footer>
-
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/91XXXXXXXXXX" class="wafl" target="_blank">💬 WhatsApp Us</a>
-
-<!-- BACK TO TOP -->
-<a href="#hero" class="bktop" id="bktop">↑</a>
-
-<!-- QUICK ENQUIRY MODAL -->
-<div class="movo" id="movo">
-  <div class="mov">
-    <button class="movc" onclick="document.getElementById('movo').classList.remove('open')">✕</button>
-    <h3>Quick Enquiry</h3>
-    <p>Fill in your details and we'll get back to you shortly.</p>
-    <div class="fg"><label>Your Name *</label><input type="text" placeholder="Your name"></div>
-    <div class="fg"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
-    <div class="fg"><label>Your Message</label><textarea placeholder="How can we help you?" style="min-height:70px"></textarea></div>
-    <p class="fnote">By clicking <strong>Send Enquiry</strong>, you confirm SHUBHAM SHIVAM & CO. may process your details to respond to this enquiry only.</p>
-    <button class="bsub" onclick="alert('Thank you! We will contact you shortly.');document.getElementById('movo').classList.remove('open')">Send Enquiry</button>
-  </div>
-</div>
-
-<script>
-  const navbar = document.getElementById('navbar');
-  const bktop = document.getElementById('bktop');
-  const mnav = document.getElementById('mnav');
-  const movo = document.getElementById('movo');
-
-  // Scroll: sticky nav shadow + back-to-top
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    bktop.classList.toggle('vis', y > 300);
-    navbar.classList.toggle('scrolled', y > 60);
-  }, { passive: true });
-
-  // Back to top
-  bktop.addEventListener('click', e => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Mobile nav open/close
-  function openMnav() {
-    mnav.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeMnav() {
-    mnav.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  document.getElementById('mnavBtn').addEventListener('click', openMnav);
-  document.getElementById('mnavClose').addEventListener('click', closeMnav);
-
-  // Close on outside click (overlay)
-  document.addEventListener('click', e => {
-    if (mnav.classList.contains('open') && !mnav.contains(e.target) && !document.getElementById('mnavBtn').contains(e.target)) {
-      closeMnav();
-    }
-  });
-
-  // Smooth scroll all anchor links + close mobile nav
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const href = a.getAttribute('href');
-      if (href === '#') return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        closeMnav();
-        setTimeout(() => {
-          const offset = navbar.offsetHeight + 8;
-          const top = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }, mnav.classList.contains('open') ? 300 : 0);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHUBHAM SHIVAM & CO. — MUZAFFARPUR</title>
+    <meta
+      name="description"
+      content="SHUBHAM SHIVAM & CO. — Chartered Accountant in MUZAFFARPUR offering Accounting & Bookkeeping, ROC Compliance, Startup Advisory. Contact us today."
+    />
+    <meta
+      name="keywords"
+      content="chartered accountant in muzaffarpur, CA in muzaffarpur, tax consultant muzaffarpur, shubham shivam co, CA bihar, GST muzaffarpur, income tax muzaffarpur"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ── RESET & BASE ── */
+      :root {
+        --navy: #0a1628;
+        --navy2: #112240;
+        --blue: #1b4fd8;
+        --blue-l: #2563eb;
+        --sky: #eef3ff;
+        --sky2: #f8faff;
+        --gold: #f59e0b;
+        --gold-l: #fcd34d;
+        --gray: #64748b;
+        --gray-l: #94a3b8;
+        --border: #e2e8f0;
+        --text: #1e293b;
+        --soft: #475569;
+        --green: #059669;
+        --r: 4px;
       }
-    });
-  });
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: #fff;
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-x: hidden;
+        width: 100%;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        -webkit-tap-highlight-color: transparent;
+      }
+      img,
+      video,
+      iframe {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-  // Modal close
-  movo.addEventListener('click', e => {
-    if (e.target === movo) movo.classList.remove('open');
-  });
+      /* ── SCROLLBAR ── */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(var(--blue), var(--navy));
+        border-radius: 100px;
+        border: 2px solid #f1f5f9;
+      }
+      ::selection {
+        background: rgba(37, 99, 235, 0.15);
+        color: var(--navy);
+      }
 
-  // Escape key closes everything
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      closeMnav();
-      movo.classList.remove('open');
-    }
-  });
-</script>
-</body>
+      /* ── TICKER ── */
+      .ticker-bar {
+        background: var(--navy);
+        color: #94a3b8;
+        font-size: 12px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-bottom: 2px solid var(--blue);
+        position: relative;
+      }
+      .ticker-bar::before,
+      .ticker-bar::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        z-index: 2;
+      }
+      .ticker-bar::before {
+        left: 0;
+        background: linear-gradient(90deg, var(--navy), transparent);
+      }
+      .ticker-bar::after {
+        right: 0;
+        background: linear-gradient(270deg, var(--navy), transparent);
+      }
+      .ticker-track {
+        display: inline-flex;
+        animation: ticker 90s linear infinite;
+        padding: 8px 0;
+      }
+      @keyframes ticker {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .ti {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0 24px;
+        border-right: 1px solid rgba(255, 255, 255, 0.07);
+        flex-shrink: 0;
+      }
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .dr {
+        background: #ef4444;
+      }
+      .do {
+        background: #f97316;
+      }
+      .db {
+        background: #60a5fa;
+      }
+      .dn {
+        background: #a78bfa;
+      }
+      .ti .due {
+        color: var(--gold);
+        font-weight: 600;
+        margin-left: 4px;
+      }
+      .ti .dl {
+        font-size: 10px;
+        color: #64748b;
+        margin-left: 3px;
+      }
+
+      /* ── NAVBAR ── */
+      nav {
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        width: 100%;
+        transition: box-shadow 0.3s;
+      }
+      nav.scrolled {
+        box-shadow:
+          0 8px 28px rgba(15, 23, 42, 0.08),
+          0 1px 2px rgba(15, 23, 42, 0.04);
+      }
+      .nc {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 20px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+      }
+
+      /* Logo */
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        flex-shrink: 0;
+        transition: transform 0.25s;
+      }
+      .logo:hover {
+        transform: translateY(-1px);
+      }
+      .logo-icon {
+        width: 38px;
+        height: 38px;
+        background: var(--blue);
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .logo-icon::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+      }
+      .logo-icon span {
+        font-family: "Fraunces", serif;
+        color: #fff;
+        font-size: 19px;
+        font-weight: 900;
+        position: relative;
+        z-index: 1;
+      }
+      .logo-txt {
+        min-width: 0;
+      }
+      .logo-txt strong {
+        display: block;
+        font-size: 13px;
+        font-weight: 800;
+        color: var(--navy);
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        white-space: nowrap;
+      }
+      .logo-txt small {
+        font-size: 10px;
+        color: var(--gray);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+      }
+
+      /* ── DESKTOP NAV LINKS ── */
+      .nl {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        flex: 1;
+        list-style: none;
+        overflow: hidden;
+        min-width: 0;
+      }
+      .nl > li {
+        position: relative;
+      }
+      .nl > li > a {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 8px 10px;
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--soft);
+        text-decoration: none;
+        border-radius: var(--r);
+        transition: all 0.2s;
+        white-space: nowrap;
+        position: relative;
+      }
+      .nl > li > a::after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 4px;
+        height: 2px;
+        background: var(--blue);
+        border-radius: 10px;
+        transform: scaleX(0);
+        transition: transform 0.25s;
+      }
+      .nl > li > a:hover::after,
+      .nl > li > a.active::after {
+        transform: scaleX(1);
+      }
+      .nl > li > a:hover,
+      .nl > li > a.active {
+        color: var(--blue);
+        background: var(--sky);
+      }
+      .nl > li > a .ch {
+        font-size: 9px;
+        color: var(--gray-l);
+        transition: transform 0.2s;
+      }
+      .nl > li:hover > a .ch {
+        transform: rotate(180deg);
+      }
+
+      /* ── DROPDOWN FIX: invisible bridge covers the gap ── */
+      .nl > li.has-drop {
+        padding-bottom: 10px; /* extends hover zone below the link */
+        margin-bottom: -10px; /* compensate so layout is unchanged */
+      }
+      .drop {
+        position: absolute;
+        top: calc(100% - 4px); /* pull up slightly so no gap */
+        left: 0;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        min-width: 175px;
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-6px);
+        transition: all 0.2s;
+        z-index: 300;
+        padding: 6px;
+        /* invisible top padding as bridge */
+        margin-top: 4px;
+      }
+      /* invisible bridge via pseudo-element */
+      .drop::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: transparent;
+      }
+      .nl > li:hover .drop {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+      .drop a {
+        display: block;
+        padding: 9px 16px;
+        font-size: 13px;
+        color: var(--soft);
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.2s;
+      }
+      .drop a:hover {
+        color: var(--blue);
+        background: var(--sky);
+      }
+
+      /* Nav right */
+      .ne {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        margin-left: auto;
+      }
+      .bwa {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: #25d366;
+        color: #fff;
+        padding: 7px 12px;
+        border-radius: var(--r);
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.2s;
+        white-space: nowrap;
+      }
+      .bwa:hover {
+        background: #1fba5a;
+      }
+      .bct {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: var(--blue);
+        color: #fff;
+        padding: 7px 14px;
+        border-radius: var(--r);
+        font-size: 12.5px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.2s;
+        white-space: nowrap;
+      }
+      .bct:hover {
+        background: var(--navy);
+      }
+      .mbtn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--r);
+        cursor: pointer;
+        font-size: 18px;
+        color: var(--text);
+      }
+
+      /* ── HERO ── */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--navy) 0%,
+          var(--navy2) 55%,
+          #1a3a6e 100%
+        );
+        color: #fff;
+        padding: 72px 20px 64px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(
+            circle at 20% 50%,
+            rgba(27, 79, 216, 0.15) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(245, 158, 11, 0.06) 0%,
+            transparent 40%
+          );
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+          );
+        background-size: 70px 70px;
+        opacity: 0.5;
+      }
+      .hbadge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 100px;
+        padding: 5px 14px 5px 6px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+      .hbadge span {
+        background: var(--gold);
+        color: var(--navy);
+        padding: 2px 10px;
+        border-radius: 100px;
+        font-size: 11px;
+        font-weight: 700;
+      }
+      .hero h1 {
+        font-family: "Fraunces", serif;
+        font-size: clamp(30px, 5vw, 62px);
+        font-weight: 900;
+        line-height: 1.08;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      }
+      .hero h1 em {
+        font-style: italic;
+        color: var(--gold-l);
+      }
+      .hero-sub {
+        font-size: clamp(14px, 2vw, 16px);
+        color: rgba(255, 255, 255, 0.65);
+        max-width: 540px;
+        margin: 0 auto 28px;
+        line-height: 1.75;
+      }
+      .hbtns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 48px;
+      }
+      .bhp,
+      .bhs,
+      .bhw {
+        padding: 11px 24px;
+        border-radius: var(--r);
+        font-size: 13.5px;
+        font-weight: 700;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: all 0.25s;
+        position: relative;
+        overflow: hidden;
+      }
+      .bhp::before,
+      .bhs::before,
+      .bhw::before {
+        content: "";
+        position: absolute;
+        top: -120%;
+        left: -20%;
+        width: 60%;
+        height: 320%;
+        background: rgba(255, 255, 255, 0.14);
+        transform: rotate(25deg);
+        transition: 0.6s;
+      }
+      .bhp:hover::before,
+      .bhs:hover::before,
+      .bhw:hover::before {
+        left: 120%;
+      }
+      .bhp {
+        background: var(--blue);
+        color: #fff;
+        border-color: var(--blue);
+      }
+      .bhp:hover {
+        background: var(--blue-l);
+        border-color: var(--blue-l);
+      }
+      .bhs {
+        background: transparent;
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.28);
+      }
+      .bhs:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .bhw {
+        background: #25d366;
+        color: #fff;
+        border-color: #25d366;
+      }
+      .bhw:hover {
+        background: #1fba5a;
+      }
+      .hstats {
+        display: flex;
+        justify-content: center;
+        max-width: 440px;
+        margin: 0 auto;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(10px);
+        animation: floaty 6s ease-in-out infinite;
+      }
+      @keyframes floaty {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+      .si {
+        flex: 1;
+        padding: 16px 10px;
+        text-align: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .si:last-child {
+        border-right: none;
+      }
+      .sn {
+        font-family: "Fraunces", serif;
+        font-size: 28px;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1;
+        margin-bottom: 3px;
+      }
+      .sn sup {
+        font-size: 14px;
+        color: var(--gold);
+      }
+      .sl {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.45);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      /* ── SHARED SECTION ── */
+      .sec {
+        padding: 64px 20px;
+        position: relative;
+      }
+      .con {
+        max-width: 1280px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .sh {
+        margin-bottom: 40px;
+        position: relative;
+      }
+      .sh::after {
+        content: "";
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--blue), var(--gold));
+        display: block;
+        margin-top: 12px;
+        border-radius: 100px;
+      }
+      .sh h2 {
+        font-family: "Fraunces", serif;
+        font-size: clamp(24px, 3.5vw, 38px);
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 8px;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+      }
+      .sh p {
+        font-size: 14px;
+        color: var(--gray);
+        max-width: 500px;
+        line-height: 1.7;
+      }
+      .stag {
+        display: inline-block;
+        background: var(--sky);
+        color: var(--blue);
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 3px 11px;
+        border-radius: 3px;
+        margin-bottom: 8px;
+        border: 1px solid rgba(27, 79, 216, 0.14);
+      }
+
+      /* ── SERVICES ── */
+      .sbg {
+        background: var(--sky2);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+      .sgrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      .sc {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 24px 20px;
+        transition: all 0.25s;
+        position: relative;
+        overflow: hidden;
+      }
+      .sc::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--blue), var(--blue-l));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s;
+      }
+      .sc::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at top right,
+          rgba(37, 99, 235, 0.07),
+          transparent 40%
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .sc:hover {
+        box-shadow: 0 8px 28px rgba(27, 79, 216, 0.1);
+        border-color: rgba(27, 79, 216, 0.2);
+        transform: translateY(-4px);
+      }
+      .sc:hover::before {
+        transform: scaleX(1);
+      }
+      .sc:hover::after {
+        opacity: 1;
+      }
+      .sci {
+        font-size: 26px;
+        margin-bottom: 11px;
+        display: block;
+        transition: transform 0.3s;
+      }
+      .sc:hover .sci {
+        transform: scale(1.08);
+      }
+      .sc h3 {
+        font-family: "Fraunces", serif;
+        font-size: 16.5px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 6px;
+      }
+      .sc > p {
+        font-size: 13px;
+        color: var(--gray);
+        line-height: 1.65;
+        margin-bottom: 11px;
+      }
+      .sc ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .sc ul li {
+        font-size: 12.5px;
+        color: var(--soft);
+        display: flex;
+        align-items: flex-start;
+        gap: 7px;
+      }
+      .sc ul li::before {
+        content: "✓";
+        color: var(--green);
+        font-size: 11px;
+        flex-shrink: 0;
+        margin-top: 2px;
+        font-weight: 700;
+      }
+
+      /* ── ABOUT ── */
+      .abg {
+        background: #fff;
+      }
+      .agrid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 56px;
+        align-items: center;
+      }
+      .at p {
+        font-size: 14px;
+        color: var(--soft);
+        line-height: 1.8;
+        margin-bottom: 13px;
+      }
+      .pa {
+        margin-top: 20px;
+      }
+      .pa h4 {
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gray);
+        margin-bottom: 9px;
+      }
+      .ptags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .ptag {
+        background: var(--sky);
+        color: var(--blue);
+        font-size: 11px;
+        font-weight: 700;
+        padding: 4px 11px;
+        border-radius: 3px;
+        border: 1px solid rgba(27, 79, 216, 0.14);
+        letter-spacing: 0.04em;
+      }
+      .aaddr {
+        margin-top: 18px;
+        padding: 13px;
+        background: var(--sky2);
+        border: 1px solid var(--border);
+        border-radius: 7px;
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+      }
+      .aaddr p {
+        font-size: 12.5px;
+        color: var(--soft);
+        line-height: 1.6;
+        margin: 0;
+      }
+      .abtns {
+        display: flex;
+        gap: 9px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+      }
+      .bso {
+        padding: 9px 18px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--r);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .bso:hover {
+        border-color: var(--blue);
+        color: var(--blue);
+      }
+      .bsl {
+        padding: 9px 18px;
+        background: var(--blue);
+        border-radius: var(--r);
+        font-size: 13px;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .bsl:hover {
+        background: var(--navy);
+      }
+      .acard {
+        background: var(--navy);
+        border-radius: 12px;
+        padding: 28px 24px;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(2, 6, 23, 0.25);
+        transition: transform 0.3s;
+      }
+      .acard:hover {
+        transform: translateY(-4px);
+      }
+      .acard::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        width: 150px;
+        height: 150px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 50%;
+      }
+      .acard::after {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        left: -40px;
+        width: 190px;
+        height: 190px;
+        background: rgba(27, 79, 216, 0.12);
+        border-radius: 50%;
+      }
+      .acbadge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--gold);
+        color: var(--navy);
+        padding: 3px 11px;
+        border-radius: 3px;
+        font-size: 10.5px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        letter-spacing: 0.04em;
+        position: relative;
+        z-index: 1;
+      }
+      .acard h3 {
+        font-family: "Fraunces", serif;
+        font-size: 22px;
+        font-weight: 800;
+        margin-bottom: 4px;
+        position: relative;
+        z-index: 1;
+      }
+      .acard .asub {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.45);
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+      }
+      .astats {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        position: relative;
+        z-index: 1;
+      }
+      .ast {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        transition: all 0.25s;
+      }
+      .ast:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateX(4px);
+      }
+      .astn {
+        font-family: "Fraunces", serif;
+        font-size: 21px;
+        font-weight: 800;
+        color: var(--gold);
+        line-height: 1;
+        min-width: 50px;
+      }
+      .asti .al {
+        font-size: 12px;
+        font-weight: 600;
+        color: #fff;
+      }
+      .asti .ad {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.4);
+        margin-top: 1px;
+      }
+
+      /* ── CONTACT ── */
+      .cbg {
+        background: var(--sky2);
+        border-top: 1px solid var(--border);
+      }
+      .cgrid {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        gap: 48px;
+        align-items: start;
+      }
+      .ctitle {
+        font-family: "Fraunces", serif;
+        font-size: clamp(20px, 2.8vw, 30px);
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 8px;
+      }
+      .csub {
+        font-size: 14px;
+        color: var(--gray);
+        margin-bottom: 22px;
+        line-height: 1.7;
+      }
+      .ciitems {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .ci {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+      }
+      .cii {
+        width: 35px;
+        height: 35px;
+        background: var(--blue);
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+      .cit strong {
+        display: block;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--gray);
+        margin-bottom: 1px;
+      }
+      .cit span {
+        font-size: 13px;
+        color: var(--text);
+      }
+      .cfc {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 24px;
+        box-shadow: 0 10px 35px rgba(15, 23, 42, 0.05);
+      }
+      .fr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .fg {
+        margin-bottom: 12px;
+      }
+      .fg label {
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--soft);
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .fg input,
+      .fg select,
+      .fg textarea {
+        width: 100%;
+        padding: 9px 11px;
+        border: 1.5px solid var(--border);
+        border-radius: 6px;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 13.5px;
+        color: var(--text);
+        outline: none;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s,
+          transform 0.15s;
+        background: #fff;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+      .fg input:hover,
+      .fg select:hover,
+      .fg textarea:hover {
+        border-color: rgba(37, 99, 235, 0.4);
+      }
+      .fg input:focus,
+      .fg select:focus,
+      .fg textarea:focus {
+        border-color: var(--blue);
+        box-shadow: 0 0 0 3px rgba(27, 79, 216, 0.07);
+        transform: translateY(-1px);
+      }
+      .fg textarea {
+        resize: vertical;
+        min-height: 85px;
+      }
+      .fnote {
+        font-size: 11px;
+        color: var(--gray-l);
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+      .bsub {
+        width: 100%;
+        padding: 12px;
+        background: var(--blue);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .bsub:hover {
+        background: var(--navy);
+      }
+
+      /* ── TESTIMONIALS ── */
+      .tbg {
+        background: #fff;
+        border-top: 1px solid var(--border);
+      }
+      .tgrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .tc {
+        background: var(--sky2);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 20px;
+        transition: all 0.25s;
+        position: relative;
+        overflow: hidden;
+      }
+      .tc::before {
+        content: '"';
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        font-size: 65px;
+        line-height: 1;
+        font-family: serif;
+        color: rgba(37, 99, 235, 0.06);
+      }
+      .tc:hover {
+        box-shadow: 0 6px 22px rgba(27, 79, 216, 0.08);
+        transform: translateY(-3px);
+      }
+      .stars {
+        color: var(--gold);
+        font-size: 13px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+      }
+      .tc blockquote {
+        font-size: 13px;
+        color: var(--soft);
+        line-height: 1.75;
+        font-style: italic;
+        margin-bottom: 14px;
+      }
+      .ta {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        border-top: 1px solid var(--border);
+        padding-top: 13px;
+      }
+      .tav {
+        width: 34px;
+        height: 34px;
+        background: var(--blue);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Fraunces", serif;
+        font-size: 15px;
+        color: #fff;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .tan {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .tar {
+        font-size: 11px;
+        color: var(--gray-l);
+        margin-top: 1px;
+      }
+      .va-row {
+        text-align: center;
+      }
+      .bva {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 9px 22px;
+        border: 1.5px solid var(--blue);
+        border-radius: var(--r);
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--blue);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .bva:hover {
+        background: var(--blue);
+        color: #fff;
+      }
+
+      /* ── TAX UPDATES ── */
+      .ubg {
+        background: var(--sky2);
+        border-top: 1px solid var(--border);
+      }
+      .ugrid {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 24px;
+      }
+      .ucard {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .uchead {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .uchead h3 {
+        font-size: 13.5px;
+        font-weight: 700;
+        color: var(--navy);
+      }
+      .dlist,
+      .nlist,
+      .trlist {
+        display: flex;
+        flex-direction: column;
+      }
+      .di {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.2s;
+      }
+      .di:last-child {
+        border-bottom: none;
+      }
+      .di:hover {
+        background: var(--sky2);
+      }
+      .ddb {
+        background: var(--navy);
+        color: #fff;
+        border-radius: 6px;
+        min-width: 46px;
+        height: 46px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .ddb .dd {
+        font-family: "Fraunces", serif;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 1;
+      }
+      .ddb .dm {
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.45);
+        margin-top: 1px;
+      }
+      .dinf h4 {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.4;
+        margin-bottom: 3px;
+      }
+      .dbadges {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+        margin-top: 3px;
+      }
+      .bd {
+        font-size: 9.5px;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 3px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .bd-gst {
+        background: #dcfce7;
+        color: #166534;
+      }
+      .bd-inc {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .bd-roc {
+        background: #ede9fe;
+        color: #4c1d95;
+      }
+      .bd-urg {
+        background: #fee2e2;
+        color: #991b1b;
+      }
+      .bd-d {
+        background: #f1f5f9;
+        color: #475569;
+      }
+      .ni {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.2s;
+        text-decoration: none;
+        display: block;
+        color: inherit;
+      }
+      .ni:last-child {
+        border-bottom: none;
+      }
+      .ni:hover {
+        background: var(--sky2);
+      }
+      .nmeta {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 4px;
+      }
+      .ndate {
+        font-size: 11px;
+        color: var(--gray-l);
+      }
+      .ncat {
+        font-size: 9.5px;
+        font-weight: 700;
+        padding: 1px 6px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .cg {
+        background: #dcfce7;
+        color: #166534;
+      }
+      .ci2 {
+        background: #fef3c7;
+        color: #92400e;
+      }
+      .cc {
+        background: #ede9fe;
+        color: #4c1d95;
+      }
+      .ni h4 {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.4;
+      }
+      .ni p {
+        font-size: 12px;
+        color: var(--gray);
+        line-height: 1.5;
+        margin-top: 2px;
+      }
+      .tri {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.2s;
+      }
+      .tri:last-child {
+        border-bottom: none;
+      }
+      .tri:hover {
+        background: var(--sky2);
+      }
+      .trm {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 3px;
+      }
+      .tri h4 {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.4;
+      }
+      .tri p {
+        font-size: 12px;
+        color: var(--gray);
+        margin-top: 2px;
+        line-height: 1.5;
+      }
+      .uva {
+        text-align: right;
+        padding-top: 10px;
+      }
+      .uva a {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--blue);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .uva a:hover {
+        color: var(--navy);
+      }
+
+      /* ── INDUSTRIES ── */
+      .ibg {
+        background: #fff;
+        border-top: 1px solid var(--border);
+      }
+      .igrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+      .ic {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 20px 18px;
+        transition: all 0.25s;
+        position: relative;
+        overflow: hidden;
+      }
+      .ic::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--blue), transparent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s;
+      }
+      .ic:hover {
+        border-color: rgba(27, 79, 216, 0.3);
+        box-shadow: 0 4px 18px rgba(27, 79, 216, 0.07);
+        transform: translateY(-2px);
+      }
+      .ic:hover::after {
+        transform: scaleX(1);
+      }
+      .iimg {
+        width: 46px;
+        height: 46px;
+        background: var(--sky);
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        margin-bottom: 11px;
+      }
+      .ic h3 {
+        font-size: 14.5px;
+        font-weight: 700;
+        color: var(--navy);
+        margin-bottom: 5px;
+      }
+      .ic p {
+        font-size: 12.5px;
+        color: var(--gray);
+        line-height: 1.65;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--navy);
+        color: rgba(255, 255, 255, 0.65);
+        padding: 48px 20px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      footer::before {
+        content: "";
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        background: rgba(37, 99, 235, 0.07);
+      }
+      footer::after {
+        content: "";
+        position: absolute;
+        bottom: -80px;
+        left: -80px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(245, 158, 11, 0.05);
+      }
+      .fgrid {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.8fr 1fr 1fr 1fr;
+        gap: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        position: relative;
+        z-index: 1;
+      }
+      .fblogo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+      .fli {
+        width: 36px;
+        height: 36px;
+        background: var(--blue);
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .fli span {
+        font-family: "Fraunces", serif;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 900;
+      }
+      .flt strong {
+        display: block;
+        font-size: 13px;
+        font-weight: 800;
+        color: #fff;
+      }
+      .flt small {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.35);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .fb > p {
+        font-size: 12.5px;
+        line-height: 1.7;
+        max-width: 290px;
+        margin-bottom: 14px;
+      }
+      .fci {
+        display: flex;
+        align-items: flex-start;
+        gap: 7px;
+        margin-bottom: 8px;
+        font-size: 12px;
+      }
+      .fci a {
+        color: rgba(255, 255, 255, 0.65);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .fci a:hover {
+        color: var(--gold);
+      }
+      .fsoc {
+        display: flex;
+        gap: 7px;
+        margin-top: 14px;
+      }
+      .fsb {
+        width: 32px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.45);
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 700;
+        transition: all 0.2s;
+      }
+      .fsb:hover {
+        background: var(--blue);
+        border-color: var(--blue);
+        color: #fff;
+      }
+      .fbadge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: rgba(245, 158, 11, 0.1);
+        border: 1px solid rgba(245, 158, 11, 0.25);
+        border-radius: 3px;
+        padding: 5px 11px;
+        font-size: 10.5px;
+        color: var(--gold);
+        font-weight: 600;
+        margin-top: 14px;
+        letter-spacing: 0.04em;
+      }
+      .fc h4 {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: rgba(255, 255, 255, 0.35);
+        margin-bottom: 14px;
+      }
+      .fc ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .fc ul li a {
+        font-size: 12.5px;
+        color: rgba(255, 255, 255, 0.55);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .fc ul li a:hover {
+        color: var(--gold-l);
+      }
+      .fbot {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 11.5px;
+        color: rgba(255, 255, 255, 0.28);
+        position: relative;
+        z-index: 1;
+      }
+      .fbot a {
+        color: rgba(255, 255, 255, 0.28);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .fbot a:hover {
+        color: var(--gold);
+      }
+
+      /* ── FLOATING BUTTONS ── */
+      .wafl {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+        z-index: 500;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        background: #25d366;
+        color: #fff;
+        text-decoration: none;
+        padding: 11px 16px;
+        border-radius: 100px;
+        font-size: 13px;
+        font-weight: 700;
+        box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+        transition: all 0.3s;
+        animation: pulsewh 2.4s infinite;
+      }
+      @keyframes pulsewh {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+        }
+        70% {
+          box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+      .wafl:hover {
+        background: #1fba5a;
+        transform: translateY(-2px);
+        animation: none;
+        box-shadow: 0 8px 26px rgba(37, 211, 102, 0.5);
+      }
+      .bktop {
+        position: fixed;
+        bottom: 22px;
+        left: 22px;
+        z-index: 500;
+        width: 38px;
+        height: 38px;
+        background: var(--navy);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--r);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s;
+        backdrop-filter: blur(10px);
+      }
+      .bktop.vis {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .bktop:hover {
+        background: var(--blue);
+      }
+
+      /* ══════════════════════════════════════════════
+         MOBILE NAV — CURVED RIGHT-SIDE SLIDE-IN
+      ══════════════════════════════════════════════ */
+      .mnav-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 22, 40, 0.55);
+        z-index: 9998;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s ease;
+        backdrop-filter: blur(3px);
+      }
+      .mnav-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .mnav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(300px, 88vw);
+        height: 100vh;
+        background: #fff;
+        z-index: 9999;
+        overflow-y: auto;
+        /* Curved left edge */
+        border-radius: 28px 0 0 28px;
+        /* Slide from right */
+        transform: translateX(110%);
+        transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+        box-shadow: -12px 0 48px rgba(10, 22, 40, 0.18);
+        display: flex;
+        flex-direction: column;
+      }
+      .mnav.open {
+        transform: translateX(0);
+      }
+
+      /* Decorative top accent bar */
+      .mnav::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--blue), var(--gold));
+        border-radius: 28px 0 0 0;
+      }
+
+      .mnavh {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 20px 16px;
+        border-bottom: 1px solid var(--border);
+        flex-shrink: 0;
+      }
+      .mnav-brand {
+        font-family: "Fraunces", serif;
+        font-weight: 800;
+        color: var(--navy);
+        font-size: 13px;
+        line-height: 1.2;
+      }
+      .mnav-brand small {
+        display: block;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 9.5px;
+        font-weight: 500;
+        color: var(--gray);
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-top: 2px;
+      }
+      .mnavc {
+        width: 32px;
+        height: 32px;
+        border: 1.5px solid var(--border);
+        border-radius: 50%;
+        background: none;
+        cursor: pointer;
+        font-size: 15px;
+        color: var(--gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        flex-shrink: 0;
+      }
+      .mnavc:hover {
+        background: var(--sky);
+        border-color: var(--blue);
+        color: var(--blue);
+      }
+
+      /* Nav links inside drawer */
+      .mnav-links {
+        padding: 10px 12px;
+        flex: 1;
+      }
+      .mnav-links a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 14px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--soft);
+        text-decoration: none;
+        border-radius: 10px;
+        transition: all 0.2s;
+        margin-bottom: 2px;
+      }
+      .mnav-links a .mn-icon {
+        width: 32px;
+        height: 32px;
+        background: var(--sky);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        flex-shrink: 0;
+        transition: all 0.2s;
+      }
+      .mnav-links a:hover {
+        background: var(--sky);
+        color: var(--blue);
+        padding-left: 18px;
+      }
+      .mnav-links a:hover .mn-icon {
+        background: var(--blue);
+      }
+
+      /* Bottom CTA in drawer */
+      .mnav-footer {
+        padding: 16px 20px 24px;
+        border-top: 1px solid var(--border);
+        flex-shrink: 0;
+      }
+      .mnav-wa {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        background: #25d366;
+        color: #fff;
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        margin-bottom: 8px;
+        transition: background 0.2s;
+      }
+      .mnav-wa:hover {
+        background: #1fba5a;
+      }
+      .mnav-ct {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        background: var(--blue);
+        color: #fff;
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .mnav-ct:hover {
+        background: var(--navy);
+      }
+
+      /* ── MODAL ── */
+      .movo {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.48);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        padding: 16px;
+      }
+      .movo.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .mov {
+        background: #fff;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 420px;
+        padding: 28px;
+        position: relative;
+        transform: scale(0.95);
+        transition: transform 0.3s;
+        box-shadow: 0 30px 70px rgba(2, 6, 23, 0.35);
+      }
+      .mov::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--blue), var(--gold));
+        border-radius: 10px 10px 0 0;
+      }
+      .movo.open .mov {
+        transform: scale(1);
+      }
+      .mov h3 {
+        font-family: "Fraunces", serif;
+        font-size: 21px;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 4px;
+      }
+      .mov p {
+        font-size: 13px;
+        color: var(--gray);
+        margin-bottom: 18px;
+      }
+      .movc {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--border);
+        border-radius: 50%;
+        background: none;
+        cursor: pointer;
+        font-size: 15px;
+        color: var(--gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .movc:hover {
+        background: var(--border);
+      }
+
+      /* ── RESPONSIVE: TABLET ── */
+      @media (max-width: 1024px) {
+        .nc {
+          padding: 0 16px;
+        }
+        .nl > li > a {
+          padding: 7px 8px;
+          font-size: 12px;
+        }
+        .logo-txt strong {
+          font-size: 12px;
+        }
+        .bwa,
+        .bct {
+          padding: 7px 10px;
+          font-size: 12px;
+        }
+        .sgrid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .agrid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .cgrid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .ugrid {
+          grid-template-columns: 1fr;
+        }
+        .tgrid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .igrid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .fgrid {
+          grid-template-columns: 1fr 1fr;
+          gap: 28px;
+        }
+        .sec {
+          padding: 56px 20px;
+        }
+      }
+
+      /* ── RESPONSIVE: MOBILE ── */
+      @media (max-width: 768px) {
+        .nc {
+          height: 60px;
+          padding: 0 14px;
+        }
+        .nl {
+          display: none;
+        }
+        .ne .bwa {
+          display: none;
+        }
+        .ne .bct {
+          display: none;
+        }
+        .mbtn {
+          display: flex;
+        }
+        .hero {
+          padding: 48px 16px 56px;
+        }
+        .hero h1 {
+          font-size: clamp(26px, 8vw, 34px);
+        }
+        .hero-sub {
+          font-size: 14px;
+        }
+        .hbtns {
+          flex-direction: column;
+          width: 100%;
+          gap: 8px;
+        }
+        .hbtns a {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+        }
+        .hstats {
+          flex-direction: column;
+          max-width: 100%;
+          animation: none;
+        }
+        .si {
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 14px;
+        }
+        .si:last-child {
+          border-bottom: none;
+        }
+        .sec {
+          padding: 48px 16px;
+        }
+        .sh {
+          margin-bottom: 28px;
+        }
+        .sh h2 {
+          font-size: clamp(22px, 7vw, 30px);
+        }
+        .sh::after {
+          width: 44px;
+        }
+        .sgrid,
+        .igrid,
+        .tgrid {
+          grid-template-columns: 1fr;
+        }
+        .fr {
+          grid-template-columns: 1fr;
+        }
+        .fgrid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .agrid,
+        .cgrid,
+        .ugrid {
+          grid-template-columns: 1fr;
+        }
+        .wafl {
+          right: 14px;
+          bottom: 14px;
+          padding: 10px 14px;
+          font-size: 12px;
+        }
+        .bktop {
+          left: 14px;
+          bottom: 14px;
+        }
+        .drop {
+          display: none !important;
+        }
+        .acard,
+        .sc,
+        .tc,
+        .ic,
+        .cfc {
+          border-radius: 12px;
+        }
+        .fbot {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .nc {
+          padding: 0 12px;
+        }
+        .logo-icon {
+          width: 34px;
+          height: 34px;
+        }
+        .logo-icon span {
+          font-size: 16px;
+        }
+        .logo-txt strong {
+          font-size: 10.5px;
+        }
+        .logo-txt small {
+          display: none;
+        }
+        .hero h1 {
+          font-size: clamp(22px, 7vw, 28px);
+        }
+        .hero-sub {
+          font-size: 13px;
+        }
+        .bhp,
+        .bhs,
+        .bhw {
+          padding: 11px 14px;
+          font-size: 13px;
+        }
+        .sn {
+          font-size: 24px;
+        }
+        .sc,
+        .tc,
+        .ic,
+        .acard,
+        .cfc {
+          padding: 16px;
+        }
+        .mov {
+          padding: 20px;
+        }
+        .igrid,
+        .tgrid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .hero h1 {
+          font-size: 21px;
+        }
+        .hero-sub {
+          font-size: 12px;
+        }
+        .bhp,
+        .bhs,
+        .bhw {
+          font-size: 12px;
+          padding: 10px 12px;
+        }
+        .logo-txt strong {
+          font-size: 9.5px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TICKER -->
+    <div class="ticker-bar">
+      <div class="ticker-track">
+        <div class="ti">
+          <span class="dot dr"></span>GSTR-3B (Apr 2026) — Summary of outward
+          supplies, ITC claimed &amp; net tax payable for turnover &gt;₹5Cr or
+          non-QRMP<span class="due">20 May</span><span class="dl">1d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot dr"></span>OIDAR Services — outward taxable supplies
+          summary<span class="due">20 May</span><span class="dl">1d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot do"></span>PMT-06 — GST payment challan for QRMP
+          scheme taxpayers<span class="due">25 May</span
+          ><span class="dl">6d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot db"></span>Issue of TCS certificates — Q4 FY
+          2025-26<span class="due">30 May</span><span class="dl">11d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot db"></span>GST ITC-03 — ITC reversal filing by
+          composition/exempted dealers<span class="due">30 May</span
+          ><span class="dl">11d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot dn"></span>📰 GSTAT Benches Officially Constituted
+          Across India
+        </div>
+        <div class="ti">
+          <span class="dot dn"></span>📰 GST Appeals System Gets Structured —
+          Benches &amp; Jurisdictions Notified
+        </div>
+        <div class="ti">
+          <span class="dot dn"></span>📰 MCA Notifies Revised Fees for DIR-3 KYC
+          Web Filing
+        </div>
+        <div class="ti">
+          <span class="dot dn"></span>📰 MCA Issues FAQs on Companies Compliance
+          Facilitation Scheme, 2026
+        </div>
+        <!-- duplicate -->
+        <div class="ti">
+          <span class="dot dr"></span>GSTR-3B (Apr 2026) — Summary of outward
+          supplies, ITC claimed &amp; net tax payable for turnover &gt;₹5Cr or
+          non-QRMP<span class="due">20 May</span><span class="dl">1d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot dr"></span>OIDAR Services — outward taxable supplies
+          summary<span class="due">20 May</span><span class="dl">1d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot do"></span>PMT-06 — GST payment challan for QRMP
+          scheme taxpayers<span class="due">25 May</span
+          ><span class="dl">6d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot db"></span>Issue of TCS certificates — Q4 FY
+          2025-26<span class="due">30 May</span><span class="dl">11d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot db"></span>GST ITC-03 — ITC reversal filing by
+          composition/exempted dealers<span class="due">30 May</span
+          ><span class="dl">11d left</span>
+        </div>
+        <div class="ti">
+          <span class="dot dn"></span>📰 GSTAT Benches Officially Constituted
+          Across India
+        </div>
+        <div class="ti">
+          <span class="dot dn"></span>📰 GST Appeals System Gets Structured —
+          Benches &amp; Jurisdictions Notified
+        </div>
+        <div class="ti">
+          <span class="dot dn"></span>📰 MCA Notifies Revised Fees for DIR-3 KYC
+          Web Filing
+        </div>
+        <div class="ti">
+          <span class="dot dn"></span>📰 MCA Issues FAQs on Companies Compliance
+          Facilitation Scheme, 2026
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="nc">
+        <a href="#hero" class="logo">
+          <div class="logo-icon"><span>S</span></div>
+          <div class="logo-txt">
+            <strong>SHUBHAM SHIVAM & CO.</strong>
+            <small>Chartered Accountants · Muzaffarpur</small>
+          </div>
+        </a>
+        <ul class="nl">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li class="has-drop">
+            <a href="#">About <span class="ch">▾</span></a>
+            <div class="drop">
+              <a href="#about">About Us</a>
+              <a href="#about">Team</a>
+              <a href="#industries">Industries</a>
+            </div>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="has-drop">
+            <a href="#">Knowledge <span class="ch">▾</span></a>
+            <div class="drop">
+              <a href="#updates">Tax News</a>
+              <a href="#updates">Due Dates</a>
+            </div>
+          </li>
+          <li class="has-drop">
+            <a href="#">Clients <span class="ch">▾</span></a>
+            <div class="drop">
+              <a href="#testimonials">Testimonials</a>
+            </div>
+          </li>
+        </ul>
+        <div class="ne">
+          <a href="https://wa.me/917277962954" class="bwa" target="_blank"
+            >💬 WhatsApp Us</a
+          >
+          <a href="#contact" class="bct">Get in Touch</a>
+          <button class="mbtn" id="mnavBtn" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE NAV OVERLAY -->
+    <div class="mnav-overlay" id="mnavOverlay"></div>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div
+      class="mnav"
+      id="mnav"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation menu"
+    >
+      <div class="mnavh">
+        <div class="mnav-brand">
+          SHUBHAM SHIVAM & CO.
+          <small>Chartered Accountants</small>
+        </div>
+        <button class="mnavc" id="mnavClose" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mnav-links">
+        <a href="#hero" class="mnav-link"
+          ><span class="mn-icon">🏠</span> Home</a
+        >
+        <a href="#services" class="mnav-link"
+          ><span class="mn-icon">📊</span> Services</a
+        >
+        <a href="#about" class="mnav-link"
+          ><span class="mn-icon">👤</span> About Us</a
+        >
+        <a href="#contact" class="mnav-link"
+          ><span class="mn-icon">✉️</span> Contact</a
+        >
+        <a href="#updates" class="mnav-link"
+          ><span class="mn-icon">📰</span> Tax News</a
+        >
+        <a href="#testimonials" class="mnav-link"
+          ><span class="mn-icon">⭐</span> Testimonials</a
+        >
+        <a href="#industries" class="mnav-link"
+          ><span class="mn-icon">🏭</span> Industries</a
+        >
+      </div>
+      <div class="mnav-footer">
+        <a href="https://wa.me/917277962954" class="mnav-wa" target="_blank"
+          >💬 WhatsApp Us</a
+        >
+        <a href="#contact" class="mnav-ct">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hbadge"><span>ICAI Member Firm</span> Muzaffarpur, Bihar</div>
+      <h1>SHUBHAM SHIVAM & CO.<br /><em>Chartered Accountants</em></h1>
+      <p class="hero-sub">
+        Your trusted partner for Accounting & Bookkeeping, ROC Compliance,
+        Startup Advisory, Tax Planning, and GST — serving businesses and
+        individuals across Muzaffarpur and Bihar.
+      </p>
+      <div class="hbtns">
+        <a href="#services" class="bhp">Our Services</a>
+        <a href="#contact" class="bhs">Get in Touch</a>
+        <a href="https://wa.me/917277962954" class="bhw" target="_blank"
+          >💬 WhatsApp Us</a
+        >
+      </div>
+      <div class="hstats">
+        <div class="si">
+          <div class="sn">500<sup>+</sup></div>
+          <div class="sl">Clients Served</div>
+        </div>
+        <div class="si">
+          <div class="sn">100<sup>%</sup></div>
+          <div class="sl">Compliance</div>
+        </div>
+        <div class="si">
+          <div class="sn">Pan</div>
+          <div class="sl">India Location</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="sec sbg" id="services">
+      <div class="con">
+        <div class="sh">
+          <div class="stag">What We Offer</div>
+          <h2>Our Services</h2>
+          <p>
+            Comprehensive professional services tailored to your business needs.
+          </p>
+        </div>
+        <div class="sgrid">
+          <div class="sc">
+            <span class="sci">📊</span>
+            <h3>Accounting & Bookkeeping</h3>
+            <p>
+              Accurate, timely bookkeeping and financial reporting for
+              businesses of all sizes.
+            </p>
+            <ul>
+              <li>Monthly bookkeeping & ledger</li>
+              <li>Financial statements preparation</li>
+              <li>MIS reporting & payroll</li>
+              <li>Tally / Zoho / QuickBooks</li>
+            </ul>
+          </div>
+          <div class="sc">
+            <span class="sci">📋</span>
+            <h3>ROC Compliance</h3>
+            <p>
+              End-to-end MCA and company secretarial compliance for all entity
+              types.
+            </p>
+            <ul>
+              <li>Annual filing — AOC-4, MGT-7</li>
+              <li>Director KYC (DIR-3)</li>
+              <li>Company incorporation & changes</li>
+              <li>LLP, OPC, Pvt Ltd compliance</li>
+            </ul>
+          </div>
+          <div class="sc">
+            <span class="sci">🔍</span>
+            <h3>Startup Advisory</h3>
+            <p>
+              From ideation to incorporation — complete guidance for startups
+              and new businesses.
+            </p>
+            <ul>
+              <li>Startup India / DPIIT registration</li>
+              <li>Pitch deck financials</li>
+              <li>Funding & angel tax advisory</li>
+              <li>MSME / Udyam registration</li>
+            </ul>
+          </div>
+          <div class="sc">
+            <span class="sci">🏢</span>
+            <h3>Tax Planning</h3>
+            <p>
+              Strategic tax planning and ITR filing for individuals, firms, and
+              companies.
+            </p>
+            <ul>
+              <li>Individual & business tax planning</li>
+              <li>ITR filing — all forms</li>
+              <li>Tax scrutiny & representation</li>
+              <li>Capital gains advisory</li>
+            </ul>
+          </div>
+          <div class="sc">
+            <span class="sci">📑</span>
+            <h3>GST Registration</h3>
+            <p>
+              Complete GST return filing, reconciliation and compliance
+              management.
+            </p>
+            <ul>
+              <li>GST registration (GSTIN)</li>
+              <li>GSTR-1, GSTR-3B monthly filing</li>
+              <li>GSTR-9 annual return</li>
+              <li>GST audit & litigation</li>
+            </ul>
+          </div>
+          <div class="sc">
+            <span class="sci">💼</span>
+            <h3>Business Advisory</h3>
+            <p>
+              Strategic financial planning and advisory to scale your business
+              confidently.
+            </p>
+            <ul>
+              <li>Strategic financial planning</li>
+              <li>Project reports & CMA data</li>
+              <li>Audit & assurance services</li>
+              <li>TDS / TCS compliance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="sec abg" id="about">
+      <div class="con">
+        <div class="agrid">
+          <div class="at">
+            <div class="stag">About Our Firm</div>
+            <h2
+              style="
+                font-family: &quot;Fraunces&quot;, serif;
+                font-size: clamp(26px, 3.5vw, 40px);
+                font-weight: 800;
+                color: var(--navy);
+                margin-bottom: 18px;
+                letter-spacing: -0.02em;
+                line-height: 1.15;
+              "
+            >
+              About Our Firm
+            </h2>
+            <p>
+              SHUBHAM SHIVAM & CO. is a professional Chartered Accountancy firm
+              dedicated to providing the highest quality financial services to
+              businesses and individuals across Muzaffarpur and Bihar.
+            </p>
+            <p>
+              Led by CA <strong>Shubham Jha</strong>, our team of qualified
+              professionals brings deep expertise in taxation, audit, and
+              compliance. We combine domain knowledge with modern technology to
+              deliver timely, accurate, and reliable solutions.
+            </p>
+            <p>
+              We believe in building long-term relationships with our clients —
+              understanding their business deeply and providing proactive,
+              personalized advice that drives real results.
+            </p>
+            <div class="pa">
+              <h4>Practice Areas</h4>
+              <div class="ptags">
+                <span class="ptag">GST</span><span class="ptag">INCOME TAX</span
+                ><span class="ptag">AUDIT</span
+                ><span class="ptag">COMPANY LAW</span
+                ><span class="ptag">TDS</span><span class="ptag">STARTUP</span>
+              </div>
+            </div>
+            <div class="aaddr">
+              <span style="font-size: 15px; flex-shrink: 0; margin-top: 1px"
+                >📍</span
+              >
+              <p>
+                Muzaffarpur, Bihar — 842001<br /><strong>Phone:</strong> +91
+                72779 62954 &nbsp;·&nbsp;
+                <strong>Email:</strong> ca@shubhamshivam.in
+              </p>
+            </div>
+            <div class="abtns">
+              <a href="#contact" class="bsl">Get in Touch</a>
+              <a href="#about" class="bso">Learn More</a>
+            </div>
+          </div>
+          <div>
+            <div class="acard">
+              <div class="acbadge">✦ Chartered Accountant</div>
+              <h3>CA Shubham Jha</h3>
+              <p class="asub">Founder & Proprietor — Shubham Shivam & Co.</p>
+              <div class="astats">
+                <div class="ast">
+                  <div class="astn">500+</div>
+                  <div class="asti">
+                    <div class="al">Clients Served</div>
+                    <div class="ad">Businesses, Individuals, Startups</div>
+                  </div>
+                </div>
+                <div class="ast">
+                  <div class="astn">10+</div>
+                  <div class="asti">
+                    <div class="al">Years Experience</div>
+                    <div class="ad">Tax, Audit & Compliance Advisory</div>
+                  </div>
+                </div>
+                <div class="ast">
+                  <div class="astn">100%</div>
+                  <div class="asti">
+                    <div class="al">Compliance Rate</div>
+                    <div class="ad">Zero missed deadlines policy</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="sec cbg" id="contact">
+      <div class="con">
+        <div class="sh">
+          <div class="stag">Reach Out</div>
+          <h2>Get in Touch</h2>
+          <p>Have a question or need assistance? Drop us a message.</p>
+        </div>
+        <div class="cgrid">
+          <div>
+            <h3 class="ctitle">We're here to help</h3>
+            <p class="csub">
+              Whether you need tax advice, GST help, or full compliance support
+              — reach out and we'll guide you.
+            </p>
+            <div class="ciitems">
+              <div class="ci">
+                <div class="cii">📍</div>
+                <div class="cit">
+                  <strong>Address</strong
+                  ><span>Muzaffarpur, Bihar — 842001</span>
+                </div>
+              </div>
+              <div class="ci">
+                <div class="cii">📞</div>
+                <div class="cit">
+                  <strong>Phone / WhatsApp</strong><span>+91 72779 62954</span>
+                </div>
+              </div>
+              <div class="ci">
+                <div class="cii">✉️</div>
+                <div class="cit">
+                  <strong>Email</strong><span>ca@shubhamshivam.in</span>
+                </div>
+              </div>
+              <div class="ci">
+                <div class="cii">🕐</div>
+                <div class="cit">
+                  <strong>Working Hours</strong
+                  ><span>Mon–Sat: 10:00 AM – 7:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cfc">
+            <div class="fr">
+              <div class="fg">
+                <label>Your Name *</label
+                ><input type="text" placeholder="Ramesh Kumar" />
+              </div>
+              <div class="fg">
+                <label>Email Address</label
+                ><input type="email" placeholder="you@email.com" />
+              </div>
+            </div>
+            <div class="fg">
+              <label>Phone Number</label
+              ><input type="tel" placeholder="+91 98765 43210" />
+            </div>
+            <div class="fg">
+              <label>Service Required</label>
+              <select>
+                <option>Select a service...</option>
+                <option>GST Registration & Filing</option>
+                <option>Income Tax / ITR Filing</option>
+                <option>ROC / Company Compliance</option>
+                <option>Accounting & Bookkeeping</option>
+                <option>Startup Advisory</option>
+                <option>Business Advisory</option>
+                <option>TDS / TCS Compliance</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Your Message</label
+              ><textarea
+                placeholder="Briefly describe your requirement..."
+              ></textarea>
+            </div>
+            <p class="fnote">
+              By clicking <strong>Send Enquiry</strong>, you confirm that
+              SHUBHAM SHIVAM & CO. may process your name, email, phone number,
+              and message only to respond to this enquiry.
+            </p>
+            <button
+              class="bsub"
+              onclick="alert('Thank you! We will get back to you shortly.')"
+            >
+              Send Enquiry
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="sec tbg" id="testimonials">
+      <div class="con">
+        <div class="sh">
+          <div class="stag">Client Stories</div>
+          <h2>What Our Clients Say</h2>
+          <p>Trusted by businesses and individuals for quality service.</p>
+        </div>
+        <div class="tgrid">
+          <div class="tc">
+            <div class="stars">★★★★★</div>
+            <blockquote>
+              "Excellent CA Services! Shubham Shivam & Co. is highly
+              professional in tax, GST, audit, and company work. CA Shubham Ji
+              is very knowledgeable and always ready to guide. Quick, reliable,
+              and trustworthy — highly recommended."
+            </blockquote>
+            <div class="ta">
+              <div class="tav">R</div>
+              <div>
+                <div class="tan">Ramesh Prasad</div>
+                <div class="tar">Business Owner, Muzaffarpur</div>
+              </div>
+            </div>
+          </div>
+          <div class="tc">
+            <div class="stars">★★★★★</div>
+            <blockquote>
+              "This firm is very good. My experience was far better than
+              expected. I will recommend others to get their accountancy, GST,
+              or ROC work done here. Very professional team and great response
+              time."
+            </blockquote>
+            <div class="ta">
+              <div class="tav">S</div>
+              <div>
+                <div class="tan">Sunil Kumar</div>
+                <div class="tar">Retailer, Bihar</div>
+              </div>
+            </div>
+          </div>
+          <div class="tc">
+            <div class="stars">★★★★★</div>
+            <blockquote>
+              "As a client, I'm highly satisfied with their professionalism and
+              client-focused service. Their team provides timely, practical
+              advice on taxation and compliance. Zero penalties in 2 years of
+              working together."
+            </blockquote>
+            <div class="ta">
+              <div class="tav">P</div>
+              <div>
+                <div class="tan">Priya Singh</div>
+                <div class="tar">Startup Founder, Muzaffarpur</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="va-row">
+          <a href="#testimonials" class="bva">View All Testimonials →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAX UPDATES -->
+    <section class="sec ubg" id="updates">
+      <div class="con">
+        <div class="sh">
+          <div class="stag">Stay Compliant</div>
+          <h2>Latest Tax Updates</h2>
+          <p>
+            Stay ahead with upcoming compliance deadlines and the latest tax
+            developments.
+          </p>
+        </div>
+        <div class="ugrid">
+          <div>
+            <div class="ucard">
+              <div class="uchead"><h3>📅 Upcoming Due Dates</h3></div>
+              <div class="dlist">
+                <div class="di">
+                  <div class="ddb">
+                    <div class="dd">20</div>
+                    <div class="dm">May</div>
+                  </div>
+                  <div class="dinf">
+                    <h4>
+                      Summary of outward supplies, ITC claimed — GSTR-3B (Apr
+                      2026)
+                    </h4>
+                    <div class="dbadges">
+                      <span class="bd bd-gst">GST</span
+                      ><span class="bd bd-urg">Tomorrow</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="di">
+                  <div class="ddb">
+                    <div class="dd">20</div>
+                    <div class="dm">May</div>
+                  </div>
+                  <div class="dinf">
+                    <h4>OIDAR Services — outward taxable supplies summary</h4>
+                    <div class="dbadges">
+                      <span class="bd bd-gst">GST</span
+                      ><span class="bd bd-urg">Tomorrow</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="di">
+                  <div class="ddb">
+                    <div class="dd">25</div>
+                    <div class="dm">May</div>
+                  </div>
+                  <div class="dinf">
+                    <h4>
+                      PMT-06 — GST payment challan for QRMP scheme taxpayers
+                    </h4>
+                    <div class="dbadges">
+                      <span class="bd bd-gst">GST</span
+                      ><span class="bd bd-d">6 days left</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="di">
+                  <div class="ddb">
+                    <div class="dd">30</div>
+                    <div class="dm">May</div>
+                  </div>
+                  <div class="dinf">
+                    <h4>Issue of TCS certificates — Q4 FY 2025-26</h4>
+                    <div class="dbadges">
+                      <span class="bd bd-inc">Income Tax</span
+                      ><span class="bd bd-d">11 days left</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="di">
+                  <div class="ddb">
+                    <div class="dd">30</div>
+                    <div class="dm">May</div>
+                  </div>
+                  <div class="dinf">
+                    <h4>
+                      GST ITC-03 — ITC reversal by composition / exempted
+                      dealers
+                    </h4>
+                    <div class="dbadges">
+                      <span class="bd bd-gst">GST</span
+                      ><span class="bd bd-d">11 days left</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="ucard">
+              <div class="uchead"><h3>📰 Tax News</h3></div>
+              <div class="nlist">
+                <div class="ni">
+                  <div class="nmeta">
+                    <span class="ndate">15 May 2026</span
+                    ><span class="ncat cg">GST</span>
+                  </div>
+                  <h4>GSTAT Benches Officially Constituted Across India</h4>
+                  <p>
+                    The GST Appellate Tribunal has officially constituted
+                    benches across multiple states for structured appeal
+                    hearings.
+                  </p>
+                </div>
+                <div class="ni">
+                  <div class="nmeta">
+                    <span class="ndate">15 May 2026</span
+                    ><span class="ncat cg">GST</span>
+                  </div>
+                  <h4>GST Appeals System Gets Structured</h4>
+                  <p>
+                    GSTAT has issued an official order allocating benches,
+                    members, and jurisdictions for GST appeal hearings.
+                  </p>
+                </div>
+                <div class="ni">
+                  <div class="nmeta">
+                    <span class="ndate">01 May 2026</span
+                    ><span class="ncat cg">GST</span>
+                  </div>
+                  <h4>GST Update — Tax Changes on Beverages (HSN Revised)</h4>
+                  <p>
+                    Notification No. 01/2026-IGST (Rate) dated 30 April 2026
+                    amends HSN codes under Schedule I (5%).
+                  </p>
+                </div>
+                <div class="ni">
+                  <div class="nmeta">
+                    <span class="ndate">23 Apr 2026</span
+                    ><span class="ncat cc">Company Law</span>
+                  </div>
+                  <h4>MCA Notifies Revised Fees for DIR-3 KYC Web Filing</h4>
+                  <p>
+                    MCA has issued Notification G.S.R. 300(E) dated 21 April
+                    2026 revising fees structure.
+                  </p>
+                </div>
+                <div class="ni">
+                  <div class="nmeta">
+                    <span class="ndate">22 Apr 2026</span
+                    ><span class="ncat cc">Company Law</span>
+                  </div>
+                  <h4>
+                    MCA Issues FAQs on Companies Compliance Facilitation Scheme,
+                    2026
+                  </h4>
+                  <p>
+                    MCA has issued FAQs clarifying CCFS-2026 scheme including
+                    eligibility and filing procedures.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="ucard" style="margin-top: 16px">
+              <div class="uchead"><h3>🔥 Trending Topics</h3></div>
+              <div class="trlist">
+                <div class="tri">
+                  <div class="trm">
+                    <span class="ncat ci2">Income Tax</span
+                    ><span class="ndate" style="margin-left: 6px"
+                      >1 day ago</span
+                    >
+                  </div>
+                  <h4>
+                    Form 16 / Form 16A validity — TRACES portal download
+                    constitutes valid TDS certificate
+                  </h4>
+                  <p>
+                    Forms downloaded through TRACES portal alone constitute
+                    valid TDS certificates under law.
+                  </p>
+                </div>
+                <div class="tri">
+                  <div class="trm">
+                    <span class="ncat ci2">Income Tax</span
+                    ><span class="ndate" style="margin-left: 6px"
+                      >1 day ago</span
+                    >
+                  </div>
+                  <h4>IT Department Launches Major Appeal Cleanup Drive</h4>
+                  <p>
+                    Income Tax Department has started an aggressive drive to
+                    dispose of pending appeals across all benches.
+                  </p>
+                </div>
+                <div class="tri">
+                  <div class="trm">
+                    <span class="ncat cg">GST</span
+                    ><span class="ndate" style="margin-left: 6px"
+                      >3 days ago</span
+                    >
+                  </div>
+                  <h4>Govt May Restrict Manual Editing in GSTR-3B</h4>
+                  <p>
+                    Government is considering restricting manual overrides in
+                    GSTR-3B to curb ITC mismatches and frauds.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="uva"><a href="#updates">View All Updates →</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="sec ibg" id="industries">
+      <div class="con">
+        <div class="sh">
+          <div class="stag">Sectors We Serve</div>
+          <h2>Industries We Serve</h2>
+          <p>
+            Specialized expertise across diverse industry sectors to serve your
+            unique compliance needs.
+          </p>
+        </div>
+        <div class="igrid">
+          <div class="ic">
+            <div class="iimg">🏭</div>
+            <h3>Manufacturing</h3>
+            <p>
+              Audit, GST compliance, cost accounting, and tax planning for
+              manufacturing enterprises.
+            </p>
+          </div>
+          <div class="ic">
+            <div class="iimg">💻</div>
+            <h3>IT & Software</h3>
+            <p>
+              Tax advisory, transfer pricing, ESOP structuring, and compliance
+              for technology companies.
+            </p>
+          </div>
+          <div class="ic">
+            <div class="iimg">🏗️</div>
+            <h3>Real Estate</h3>
+            <p>
+              GST on construction, capital gains planning, and RERA compliance
+              advisory.
+            </p>
+          </div>
+          <div class="ic">
+            <div class="iimg">🏥</div>
+            <h3>Healthcare</h3>
+            <p>
+              Tax planning and compliance for hospitals, clinics, and healthcare
+              providers.
+            </p>
+          </div>
+          <div class="ic">
+            <div class="iimg">🛒</div>
+            <h3>Retail & E-commerce</h3>
+            <p>
+              GST filing, inventory valuation, and multi-state compliance for
+              retail businesses.
+            </p>
+          </div>
+          <div class="ic">
+            <div class="iimg">🏦</div>
+            <h3>Banking & Finance</h3>
+            <p>
+              Regulatory compliance, tax audit, and financial reporting for
+              NBFCs and banks.
+            </p>
+          </div>
+        </div>
+        <div class="va-row">
+          <a href="#industries" class="bva">View All Industries →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="fgrid">
+        <div class="fb">
+          <div class="fblogo">
+            <div class="fli"><span>S</span></div>
+            <div class="flt">
+              <strong>SHUBHAM SHIVAM & CO.</strong
+              ><small>Chartered Accountants</small>
+            </div>
+          </div>
+          <p>
+            SHUBHAM SHIVAM & CO. is a trusted Chartered Accountant firm based in
+            Muzaffarpur, Bihar. We provide professional services including
+            Accounting & Bookkeeping, ROC Compliance, Startup Advisory, and Tax
+            Planning to individuals and businesses across Bihar.
+          </p>
+          <div class="fci">📍 Muzaffarpur, Bihar — 842001</div>
+          <div class="fci">
+            📞 <a href="tel:+917277962954">+91 72779 62954</a>
+          </div>
+          <div class="fci">
+            ✉️ <a href="mailto:ca@shubhamshivam.in">ca@shubhamshivam.in</a>
+          </div>
+          <div class="fsoc">
+            <a href="#" class="fsb">in</a>
+            <a href="#" class="fsb">fb</a>
+            <a href="#" class="fsb">ig</a>
+          </div>
+          <div class="fbadge">
+            ✦ Member of ICAI — Institute of Chartered Accountants of India
+          </div>
+        </div>
+        <div class="fc">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#about">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#updates">Tax News</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="fc">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Accounting & Bookkeeping</a></li>
+            <li><a href="#services">ROC Compliance</a></li>
+            <li><a href="#services">Startup Advisory</a></li>
+            <li><a href="#services">Tax Planning</a></li>
+            <li><a href="#services">GST Registration</a></li>
+            <li><a href="#services">Business Advisory</a></li>
+            <li><a href="#services">TDS / TCS</a></li>
+          </ul>
+        </div>
+        <div class="fc">
+          <h4>Important Links</h4>
+          <ul>
+            <li>
+              <a href="https://incometaxindia.gov.in" target="_blank"
+                >Income Tax India</a
+              >
+            </li>
+            <li>
+              <a href="https://eportal.incometax.gov.in" target="_blank"
+                >e-Filing Portal</a
+              >
+            </li>
+            <li>
+              <a href="https://www.gst.gov.in" target="_blank">GST Portal</a>
+            </li>
+            <li>
+              <a href="https://www.mca.gov.in" target="_blank">MCA Portal</a>
+            </li>
+            <li>
+              <a href="https://www.tdscpc.gov.in" target="_blank"
+                >TRACES / TDS</a
+              >
+            </li>
+            <li><a href="https://www.icai.org" target="_blank">ICAI</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fbot">
+        <p>
+          © 2026 SHUBHAM SHIVAM & CO. All rights reserved. · Muzaffarpur, Bihar
+        </p>
+        <p>
+          Member of ICAI —
+          <a href="https://www.icai.org" target="_blank"
+            >Institute of Chartered Accountants of India</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/917277962954" class="wafl" target="_blank"
+      >💬 WhatsApp Us</a
+    >
+
+    <!-- BACK TO TOP -->
+    <a href="#hero" class="bktop" id="bktop">↑</a>
+
+    <!-- QUICK ENQUIRY MODAL -->
+    <div class="movo" id="movo">
+      <div class="mov">
+        <button
+          class="movc"
+          onclick="document.getElementById('movo').classList.remove('open')"
+        >
+          ✕
+        </button>
+        <h3>Quick Enquiry</h3>
+        <p>Fill in your details and we'll get back to you shortly.</p>
+        <div class="fg">
+          <label>Your Name *</label
+          ><input type="text" placeholder="Your name" />
+        </div>
+        <div class="fg">
+          <label>Phone Number *</label
+          ><input type="tel" placeholder="+91 XXXXX XXXXX" />
+        </div>
+        <div class="fg">
+          <label>Your Message</label
+          ><textarea
+            placeholder="How can we help you?"
+            style="min-height: 70px"
+          ></textarea>
+        </div>
+        <p class="fnote">
+          By clicking <strong>Send Enquiry</strong>, you confirm SHUBHAM SHIVAM
+          & CO. may process your details to respond to this enquiry only.
+        </p>
+        <button
+          class="bsub"
+          onclick="
+            alert('Thank you! We will contact you shortly.');
+            document.getElementById('movo').classList.remove('open');
+          "
+        >
+          Send Enquiry
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const navbar = document.getElementById("navbar");
+      const bktop = document.getElementById("bktop");
+      const mnav = document.getElementById("mnav");
+      const mnavOverlay = document.getElementById("mnavOverlay");
+      const mnavBtn = document.getElementById("mnavBtn");
+      const mnavClose = document.getElementById("mnavClose");
+      const movo = document.getElementById("movo");
+
+      /* ── Scroll: nav shadow + back-to-top ── */
+      window.addEventListener(
+        "scroll",
+        () => {
+          const y = window.scrollY;
+          bktop.classList.toggle("vis", y > 300);
+          navbar.classList.toggle("scrolled", y > 60);
+        },
+        { passive: true },
+      );
+
+      /* ── Back to top ── */
+      bktop.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      /* ── Mobile nav open / close ── */
+      function openMnav() {
+        mnav.classList.add("open");
+        mnavOverlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+        mnavClose.focus();
+      }
+      function closeMnav() {
+        mnav.classList.remove("open");
+        mnavOverlay.classList.remove("open");
+        document.body.style.overflow = "";
+        mnavBtn.focus();
+      }
+
+      mnavBtn.addEventListener("click", openMnav);
+      mnavClose.addEventListener("click", closeMnav);
+      mnavOverlay.addEventListener("click", closeMnav);
+
+      /* ── Close mobile nav on link click ── */
+      mnav.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", closeMnav);
+      });
+
+      /* ── Smooth scroll all anchor links ── */
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          const href = a.getAttribute("href");
+          if (href === "#") return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            const wasOpen = mnav.classList.contains("open");
+            closeMnav();
+            setTimeout(
+              () => {
+                const offset = navbar.offsetHeight + 8;
+                const top =
+                  target.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({ top, behavior: "smooth" });
+              },
+              wasOpen ? 320 : 0,
+            );
+          }
+        });
+      });
+
+      /* ── Modal close on backdrop ── */
+      movo.addEventListener("click", (e) => {
+        if (e.target === movo) movo.classList.remove("open");
+      });
+
+      /* ── Escape key ── */
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeMnav();
+          movo.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
 </html>
