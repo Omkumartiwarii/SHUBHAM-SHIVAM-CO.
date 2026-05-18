@@ -198,13 +198,15 @@
         flex-shrink: 0;
         transition: transform 0.25s;
       }
+
       .logo:hover {
         transform: translateY(-1px);
       }
+
       .logo-icon {
-        width: 38px;
-        height: 38px;
-        background: var(--blue);
+        width: 70px;
+        height: 55px;
+        background: #fff;
         border-radius: var(--r);
         display: flex;
         align-items: center;
@@ -212,28 +214,43 @@
         flex-shrink: 0;
         position: relative;
         overflow: hidden;
+        border: 1px solid rgba(27, 79, 216, 0.12);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
       }
+
+      /* REMOVE OLD S LETTER */
+      .logo-icon span {
+        display: none;
+      }
+
+      /* LOGO IMAGE */
+      .logo-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 4px;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* OPTIONAL SHINE EFFECT */
       .logo-icon::after {
         content: "";
         position: absolute;
         inset: 0;
         background: linear-gradient(
           135deg,
-          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0.18),
           transparent
         );
+        z-index: 3;
+        pointer-events: none;
       }
-      .logo-icon span {
-        font-family: "Fraunces", serif;
-        color: #fff;
-        font-size: 19px;
-        font-weight: 900;
-        position: relative;
-        z-index: 1;
-      }
+
       .logo-txt {
         min-width: 0;
       }
+
       .logo-txt strong {
         display: block;
         font-size: 13px;
@@ -243,12 +260,33 @@
         line-height: 1.2;
         white-space: nowrap;
       }
+
       .logo-txt small {
         font-size: 10px;
         color: var(--gray);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         white-space: nowrap;
+      }
+
+      /* MOBILE */
+      @media (max-width: 768px) {
+        .logo-icon {
+          width: 38px;
+          height: 38px;
+        }
+
+        .logo-icon img {
+          padding: 3px;
+        }
+
+        .logo-txt strong {
+          font-size: 11px;
+        }
+
+        .logo-txt small {
+          font-size: 8px;
+        }
       }
 
       /* ── DESKTOP NAV LINKS ── */
@@ -2294,7 +2332,10 @@
     <nav id="navbar">
       <div class="nc">
         <a href="#hero" class="logo">
-          <div class="logo-icon"><span>S</span></div>
+          <div class="logo-icon">
+            <img src="jdlogosvg.jpg" alt="SHUBHAM SHIVAM & CO Logo" />
+          </div>
+
           <div class="logo-txt">
             <strong>SHUBHAM SHIVAM & CO.</strong>
             <small>Chartered Accountants · Muzaffarpur</small>
